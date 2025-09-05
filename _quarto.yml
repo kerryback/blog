@@ -23,15 +23,10 @@ site:
     title: ""
     logo: "teaching_finance_with_ai_logo.png"
     right:
-      - text: "About"
-        href: about.qmd
       - text: "Subscribe"
         href: subscribe.qmd
-      - text: Course Materials
-        href: https://mgmt675-2025.kerryback.com
   page-footer:
-    right: "Built with [Quarto](https://quarto.org/)"
-    left: "&copy; Copyright 2025, Kerry Back"
+    center: "&copy; Copyright 2025, Kerry Back"
 
 format:
   html:
