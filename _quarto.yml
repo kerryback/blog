@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - CNAME
   render:
     - "*.qmd"
     - "!/assets/*.*"
@@ -20,11 +22,12 @@ site:
 
 
   navbar:
-    title: ""
-    logo: "teaching_finance_with_ai_logo.png"
+    title: "Finance + AI Insights"
     right:
       - text: "Subscribe"
         href: subscribe.qmd
+      - text: '<img src="teaching_finance_with_ai_logo.png" style="height: 30px;">'
+        href: "https://finance-with-ai.org"
   page-footer:
     center: "&copy; Copyright 2025, Kerry Back"
 
