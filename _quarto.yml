@@ -12,8 +12,8 @@ project:
     - "!*/.DS_Store"
 
 site:
-  title: "Teaching Finance with AI"
-  site-url: https://finance-with-ai.org
+  title: "Finance + AI Insights"
+  site-url: https://blog.finance-with-ai.org
   feed:
     type: rss2
   description: "Teaching the use of generative AI in finance"
