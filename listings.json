@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/00-welcome/index.html",
+      "/posts/01-julius/index.html",
+      "/posts/02-online-data/index.html",
+      "/posts/03-visualize/index.html",
+      "/posts/04-capm/index.html",
+      "/posts/05-building/index.html",
+      "/posts/06-prompts/index.html",
+      "/posts/07-apps/index.html",
+      "/posts/08-simulation/index.html",
+      "/posts/09-mean-variance/index.html",
+      "/posts/10-apis/index.html",
+      "/posts/11-alpha/index.html",
+      "/posts/12-fama-french/index.html",
+      "/posts/18-scraping/index.html",
+      "/posts/13-capital-budgeting/index.html",
+      "/posts/form4/index.html",
+      "/posts/24-tech-stack/index.html"
+    ]
+  }
+]
