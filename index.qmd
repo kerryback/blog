@@ -1,5 +1,4 @@
 ---
-title: ""
 listing:
   contents: 
     - "posts/*/index.qmd"
@@ -15,9 +14,5 @@ page-layout: full
 title-block-banner: false
 ---
 
-::: {style="text-align: center;"}
-[![](teaching_finance_with_ai_logo.png){width="150px"}](https://blog.finance-with-ai.org)
-:::
 
-Follow on [Substack](https://kerryback.substack.com)
-<br><br><br>
+# Observations about Teaching Finance + AI

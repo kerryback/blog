@@ -14,7 +14,7 @@ project:
     - "!*/.DS_Store"
 
 site:
-  title: "Finance + AI Insights"
+  title: ""
   site-url: https://blog.finance-with-ai.org
   feed:
     type: rss2
@@ -22,11 +22,11 @@ site:
 
 
   navbar:
-    title: "Finance + AI Insights"
+    logo: teaching_finance_with_ai_logo.png
+    logo-href: https://finance-and-ai.kerryback.com
     right:
-      - icon: rss
-        text: "Subscribe"
-        href: subscribe.qmd
+      - icon: substack
+        href: https://kerryback.substack.com
       
         
   page-footer:
