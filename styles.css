@@ -1,15 +1,41 @@
 
 /* Styles for both themes */
 .navbar {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    min-height: 80px !important;
+}
+
+/* Prevent navbar from sliding off */
+#quarto-header {
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    top: 0 !important;
+}
+
+.navbar {
+    position: static !important;
+    transform: translateY(0) !important;
+    margin-top: 0 !important;
+}
+
+/* Override any hide-navbar class */
+.hide-navbar {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure navbar items are visible */
+.navbar-nav {
+    display: flex !important;
+    visibility: visible !important;
 }
 
 .navbar-brand img {
-    max-height: 75px;  /* Set logo height to 200px */
+    max-height: 75px;  /* Set logo height to 75px */
     width: auto;
-    /*margin-top: -1rem;  /* Adjust vertical position if needed */
-    /*margin-bottom: -1rem;
 }
 
 /* Light theme specific styles */

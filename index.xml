@@ -662,34 +662,5 @@ print("Response:", response.choices[0].message.content)</code></pre>
   <pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.finance-with-ai.org/posts/01-julius/julius.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
-<item>
-  <title>Teaching Finance with AI</title>
-  <dc:creator>Kerry Back</dc:creator>
-  <link>https://blog.finance-with-ai.org/posts/00-welcome/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.finance-with-ai.org/posts/00-welcome/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
-</figure>
-</div>
-<p>I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace. I’ve started this blog and created the site <a href="https://finance-with-ai.org">finance-with-ai.org</a> to communicate things I’ve learned about teaching MBA students at Rice University how to do financial analyses using “AI + coding” and more broadly how generative AI can and is being used in the finance industry. I will post short notes on what I’ve learned about teaching this topic and on related things I find interesting. The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.</p>
-<p>The current effectiveness of AI + coding varies somewhat between corporate finance and investments applications. Here, I lump fundamental security analysis with corporate finance. There are many topics in the investments area for which spreadsheets were never well equipped and for which spreadsheets are seldom used in practice. Previously, it was difficult to teach those topics by example, but now students can prompt an LLM to generate code for them.</p>
-<p>Even in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable. It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets. AI can be used as a collaborator – “tell me how you would do this” or “you do it your way, and I’ll do it my way, and then we can compare answers.” As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications. Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate. To prepare our students for that world and to give them a leg up, we should teach them what they can do now and what may lie ahead.</p>
-<p>It is hard to keep up in this rapidly evolving world. Please help by sharing with me and others in the comments.</p>
-<hr>
-<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
-
-
-
- ]]></description>
-  <guid>https://blog.finance-with-ai.org/posts/00-welcome/</guid>
-  <pubDate>Sat, 03 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.finance-with-ai.org/posts/00-welcome/logo.png" medium="image" type="image/png" height="102" width="144"/>
-</item>
 </channel>
 </rss>

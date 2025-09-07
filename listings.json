@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/00-welcome/index.html",
       "/posts/01-julius/index.html",
       "/posts/02-online-data/index.html",
       "/posts/03-visualize/index.html",
