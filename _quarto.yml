@@ -57,9 +57,9 @@ execute:
 comments:
   giscus:
     repo: kerryback/blog
-    repo-id: R_kgDOOkPrbQ
+    repo-id: R_kgDOPrZqYQ
     category: General
-    category-id: DIC_kwDOOkPrbc4Cpylb
+    category-id: DIC_kwDOPrZqYc4CvHnR
     mapping: pathname
     reactions-enabled: true
     loading: lazy
