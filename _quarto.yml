@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - CNAME
+    - image2.png
   render:
     - "*.qmd"
     - "!/assets/*.*"
@@ -15,19 +16,11 @@ project:
 
 site:
   title: ""
-  site-url: https://blog.finance-with-ai.org
+  site-url: https://blog.kerryback.com
   feed:
     type: rss2
   description: "Teaching the use of generative AI in finance"
 
-
-  navbar:
-    logo: teaching_finance_with_ai_logo.png
-    logo-href: https://finance-and-ai.kerryback.com
-    right:
-      - icon: substack
-        href: https://kerryback.substack.com
-      
         
   page-footer:
     center: "&copy; Copyright 2025, Kerry Back"
@@ -38,17 +31,32 @@ format:
     theme:
       light: flatly
       dark: superhero
-      
-      
     css: styles.css
     toc: true
+    theme-dark: superhero
+    theme-light: flatly
+    include-after-body: |
+      <script>
+      (function() {
+        // Apply saved theme on page load
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-bs-theme', savedTheme);
+        
+        // Listen for theme changes from other pages
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'theme') {
+            document.documentElement.setAttribute('data-bs-theme', e.newValue);
+          }
+        });
+      })();
+      </script>
 
 execute:
   freeze: auto
 
 comments:
   giscus:
-    repo: finance-with-ai/blog
+    repo: kerryback/blog
     repo-id: R_kgDOOkPrbQ
     category: General
     category-id: DIC_kwDOOkPrbc4Cpylb

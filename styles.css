@@ -46,4 +46,18 @@
 /* Dark theme specific styles */
 [data-theme="dark"] .navbar-brand img {
     filter: brightness(0.9);  /* slightly dim for dark theme */
+}
+
+/* Global theme toggle support */
+html {
+    transition: color-scheme 0.3s ease;
+}
+
+/* Ensure theme is applied consistently */
+html[data-bs-theme="dark"] {
+    color-scheme: dark;
+}
+
+html[data-bs-theme="light"] {
+    color-scheme: light;
 } 
