@@ -15,7 +15,7 @@ project:
     - .nojekyll
 
 site:
-  title: "Teaching Finance with AI"
+  title: "Blog: Gen AI for Finance"
   site-url: https://finance-with-ai.org
   feed:
     type: rss2
