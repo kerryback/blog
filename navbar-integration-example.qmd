@@ -1,0 +1,23 @@
+---
+title: ""
+listing:
+  contents:
+    - "posts/*/index.qmd"
+  sort: "date asc"
+  type: default
+  categories: true
+  feed: true
+  sort-ui: true
+  filter-ui: false
+  image-align: left
+  image-height: "8em"
+page-layout: full
+title-block-banner: false
+include-in-header: |
+  <link rel="stylesheet" href="custom-navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+include-before-body: custom-navbar.html
+---
+
+Follow on [Substack](https://kerryback.substack.com)
+<br><br><br>

@@ -1,0 +1,20 @@
+navbar:
+    title: false
+    search: true
+    left:
+      - icon: house-door-fill
+        text: ""
+        href: https://genai4finance.kerryback.com
+    right:
+      - text: Blog
+        href: index.qmd
+      - text: Syllabus
+        href: https://mgmt675-2026.kerryback.com
+        target: _blank
+      - text: Discussions
+        href: "https://genai4finance.kerryback.com#giscus"
+      - text: FMA Tutorial
+        href: https://fma2025.kerryback.com
+        target: _blank
+      - text: FMA Award
+        href: "#"

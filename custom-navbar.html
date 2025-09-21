@@ -1,0 +1,72 @@
+<nav class="custom-navbar">
+  <div class="navbar-container">
+    <!-- Left section -->
+    <div class="navbar-left">
+      <a href="https://genai4finance.kerryback.com" class="navbar-home">
+        <i class="bi bi-house-door-fill"></i>
+      </a>
+    </div>
+
+    <!-- Search section -->
+    <div class="navbar-search">
+      <div class="search-container">
+        <input type="text" id="navbar-search" placeholder="Search..." class="search-input">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+    </div>
+
+    <!-- Right section -->
+    <div class="navbar-right">
+      <a href="index.qmd" class="navbar-link">Blog</a>
+      <a href="https://mgmt675-2026.kerryback.com" class="navbar-link" target="_blank">Syllabus</a>
+      <a href="https://genai4finance.kerryback.com#giscus" class="navbar-link">Discussions</a>
+      <a href="https://fma2025.kerryback.com" class="navbar-link" target="_blank">FMA Tutorial</a>
+      <a href="#" class="navbar-link">FMA Award</a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <div class="navbar-toggle">
+      <i class="bi bi-list"></i>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="navbar-mobile-menu">
+    <a href="https://genai4finance.kerryback.com" class="navbar-link mobile">
+      <i class="bi bi-house-door-fill"></i> Home
+    </a>
+    <a href="index.qmd" class="navbar-link mobile">Blog</a>
+    <a href="https://mgmt675-2026.kerryback.com" class="navbar-link mobile" target="_blank">Syllabus</a>
+    <a href="https://genai4finance.kerryback.com#giscus" class="navbar-link mobile">Discussions</a>
+    <a href="https://fma2025.kerryback.com" class="navbar-link mobile" target="_blank">FMA Tutorial</a>
+    <a href="#" class="navbar-link mobile">FMA Award</a>
+  </div>
+</nav>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.navbar-toggle');
+  const mobileMenu = document.querySelector('.navbar-mobile-menu');
+
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+  }
+
+  // Simple search functionality
+  const searchInput = document.getElementById('navbar-search');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const query = this.value.trim();
+        if (query) {
+          // Implement search functionality here
+          console.log('Search for:', query);
+        }
+      }
+    });
+  }
+});
+</script>
