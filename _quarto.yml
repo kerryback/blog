@@ -10,6 +10,9 @@ project:
     - "!*/.ipynb_checkpoints/" # exclude in subdirectories
     - "!.DS_Store"
     - "!*/.DS_Store"
+  resources:
+    - CNAME
+    - .nojekyll
 
 site:
   title: "Teaching Finance with AI"
