@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Teaching Finance with AI</title>
+<title>Blog: Gen AI for Finance</title>
 <link>https://finance-with-ai.org/navbar-integration-example.html</link>
 <atom:link href="https://finance-with-ai.org/navbar-integration-example.xml" rel="self" type="application/rss+xml"/>
 <description>Teaching the use of generative AI in finance</description>
