@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>about – Teaching Finance with AI</title>
+<title>navbar-integration-example – Teaching Finance with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,11 +30,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -71,10 +74,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="Teaching Finance with AI" href="navbar-integration-example.xml" data-external="1"></head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -290,50 +351,629 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#about-this-site" id="toc-about-this-site" class="nav-link active" data-scroll-target="#about-this-site">About this Site</a></li>
-  <li><a href="#about-me" id="toc-about-me" class="nav-link" data-scroll-target="#about-me">About Me</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(17)</span></div><div class="category" data-category="QUklMjBPdmVydmlldw==">AI Overview <span class="quarto-category-count">(3)</span></div><div class="category" data-category="RmluYW5jZQ==">Finance <span class="quarto-category-count">(8)</span></div><div class="category" data-category="UHl0aG9uJTIwVG9vbHM=">Python Tools <span class="quarto-category-count">(6)</span></div></div></div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="31-small-square.jpg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block"></header>
-    <div class="about-links">
-  <a href="https://kerryback.com" class="about-link" rel="" target="">
-     <span class="about-link-text">My Home Page</span>
-  </a>
-  <a href="mailto:kerryback@gmail.com" class="about-link" rel="" target="">
-     <span class="about-link-text">Email Me</span>
-  </a>
-</div>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+<nav class="custom-navbar">
+  <div class="navbar-container">
+    <!-- Left section -->
+    <div class="navbar-left">
+      <a href="https://genai4finance.kerryback.com" class="navbar-home">
+        <i class="bi bi-house-door-fill"></i>
+      </a>
+    </div>
+
+    <!-- Search section -->
+    <div class="navbar-search">
+      <div class="search-container">
+        <input type="text" id="navbar-search" placeholder="Search..." class="search-input">
+        <i class="bi bi-search search-icon"></i>
+      </div>
+    </div>
+
+    <!-- Right section -->
+    <div class="navbar-right">
+      <a href="./index.html" class="navbar-link">Blog</a>
+      <a href="https://mgmt675-2026.kerryback.com" class="navbar-link" target="_blank">Syllabus</a>
+      <a href="https://genai4finance.kerryback.com#giscus" class="navbar-link">Discussions</a>
+      <a href="https://fma2025.kerryback.com" class="navbar-link" target="_blank">FMA Tutorial</a>
+      <a href="#" class="navbar-link">FMA Award</a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <div class="navbar-toggle">
+      <i class="bi bi-list"></i>
+    </div>
   </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
+
+  <!-- Mobile menu -->
+  <div class="navbar-mobile-menu">
+    <a href="https://genai4finance.kerryback.com" class="navbar-link mobile">
+      <i class="bi bi-house-door-fill"></i> Home
+    </a>
+    <a href="./index.html" class="navbar-link mobile">Blog</a>
+    <a href="https://mgmt675-2026.kerryback.com" class="navbar-link mobile" target="_blank">Syllabus</a>
+    <a href="https://genai4finance.kerryback.com#giscus" class="navbar-link mobile">Discussions</a>
+    <a href="https://fma2025.kerryback.com" class="navbar-link mobile" target="_blank">FMA Tutorial</a>
+    <a href="#" class="navbar-link mobile">FMA Award</a>
+  </div>
+</nav>
+
+<script>
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.navbar-toggle');
+  const mobileMenu = document.querySelector('.navbar-mobile-menu');
+
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+  }
+
+  // Simple search functionality
+  const searchInput = document.getElementById('navbar-search');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const query = this.value.trim();
+        if (query) {
+          // Implement search functionality here
+          console.log('Search for:', query);
+        }
+      }
+    });
+  }
+});
+</script>
 
 
-<section id="about-this-site" class="level2">
-<h2 data-anchor-id="about-this-site">About this Site</h2>
-<p>The link above is to the materials for the six-week MBA course I taught in Spring 2025. The course is certainly not perfect. It was developed “just in time” and substantially redesigned on the fly. Nevertheless, it seemed to work reasonably well, so I offer it as a possible starting point for people who may want to teach this topic but have not yet done so. If you have experience teaching it or have other things to add, please let us know in the comments below.</p>
-<p>We all face a difficult job keeping up in this rapidly evolving environment. I hope this site can make that somewhat easier. I would be happy to host guest bloggers or to link content from others to make this a shared resource. Post a comment below to share your views.</p>
-</section>
-<section id="about-me" class="level2 below-image">
-<h2 class="below-image" data-anchor-id="about-me">About Me</h2>
-<p>I am Kerry Back, J. Howard Creekmore Professor of Finance and Professor of Economics at Rice University.</p>
 
 
-</section>
-</main></div>
+<p>Follow on <a href="https://kerryback.substack.com">Substack</a> <br><br><br></p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
 </div>
- <!-- /main -->
+<div class="list quarto-listing-default">
+<div class="quarto-post image-left" data-index="0" data-listing-date-sort="1746230400000" data-listing-file-modified-sort="1758468804171" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="367">
+<div class="thumbnail"><a href="./posts/00-welcome/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/00-welcome/logo.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/00-welcome/index.html" class="no-external">Teaching Finance with AI</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/00-welcome/index.html" class="no-external">
+I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace. I’ve started this blog and…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/00-welcome/index.html" class="no-external">
+<div class="listing-date">
+May 3, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="1" data-categories="QUklMjBPdmVydmlldw==" data-listing-date-sort="1746316800000" data-listing-file-modified-sort="1758468804172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1130">
+<div class="thumbnail"><a href="./posts/01-julius/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/01-julius/julius.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/01-julius/index.html" class="no-external">Julius and the Democratization of Coding</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPdmVydmlldw=='); return false;">AI Overview</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/01-julius/index.html" class="no-external">
+The world is aware that generative AI has made coders more efficient, but I don’t know if there is as much recognition of the more important fact that gen AI has made coding…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/01-julius/index.html" class="no-external">
+<div class="listing-date">
+May 4, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="2" data-categories="RmluYW5jZSUyQ1B5dGhvbiUyMFRvb2xz" data-listing-date-sort="1746403200000" data-listing-file-modified-sort="1758468804172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
+<div class="thumbnail"><a href="./posts/02-online-data/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/02-online-data/online.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/02-online-data/index.html" class="no-external">Online Data</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/02-online-data/index.html" class="no-external">
+We can upload files to Julius as with other chatbots. We can then chat about the data with the benefit of python. In fact, Julius.ai started life as the “Chat with Your…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/02-online-data/index.html" class="no-external">
+<div class="listing-date">
+May 5, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="3" data-categories="UHl0aG9uJTIwVG9vbHM=" data-listing-date-sort="1746403200000" data-listing-file-modified-sort="1758468804179" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="339">
+<div class="thumbnail"><a href="./posts/03-visualize/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/03-visualize/visualize2.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/03-visualize/index.html" class="no-external">Data Visualization</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/03-visualize/index.html" class="no-external">
+Python has very versatile plotting libraries. The primary libraries are matplotlib and seaborn, but there are others - for example, plotly and other libraries create…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/03-visualize/index.html" class="no-external">
+<div class="listing-date">
+May 5, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="4" data-categories="RmluYW5jZQ==" data-listing-date-sort="1746489600000" data-listing-file-modified-sort="1758468804185" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556">
+<div class="thumbnail"><a href="./posts/04-capm/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/04-capm/capm.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/04-capm/index.html" class="no-external">CAPM</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/04-capm/index.html" class="no-external">
+Calculating betas is an easy exercise to do with Julius. We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/04-capm/index.html" class="no-external">
+<div class="listing-date">
+May 6, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="5" data-categories="UHl0aG9uJTIwVG9vbHM=" data-listing-date-sort="1746576000000" data-listing-file-modified-sort="1758468804195" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="347">
+<div class="thumbnail"><a href="./posts/05-building/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/05-building/building.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/05-building/index.html" class="no-external">Building Stuff</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/05-building/index.html" class="no-external">
+A big advantage of coding (and using AI to write code) is that things can be automated. A student this spring told me that a friend of his in the finance industry had just…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/05-building/index.html" class="no-external">
+<div class="listing-date">
+May 7, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="6" data-categories="QUklMjBPdmVydmlldw==" data-listing-date-sort="1746576000000" data-listing-file-modified-sort="1758468804198" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="798">
+<div class="thumbnail"><a href="./posts/06-prompts/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/06-prompts/prompts.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/06-prompts/index.html" class="no-external">Prompt Engineering (or Not)</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPdmVydmlldw=='); return false;">AI Overview</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/06-prompts/index.html" class="no-external">
+I use Menti surveys periodically to ask students what they would like to learn more about, and how to write effective prompts frequently shows up. In the first bit of time…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/06-prompts/index.html" class="no-external">
+<div class="listing-date">
+May 7, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="7" data-categories="UHl0aG9uJTIwVG9vbHM=" data-listing-date-sort="1746662400000" data-listing-file-modified-sort="1758468804207" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
+<div class="thumbnail"><a href="./posts/07-apps/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/07-apps/apps.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/07-apps/index.html" class="no-external">Creating Apps</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/07-apps/index.html" class="no-external">
+After the last session of my class in the spring, a student came up to me and said “I want to thank you. I never knew anything about programming, and now I can create apps.…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/07-apps/index.html" class="no-external">
+<div class="listing-date">
+May 8, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="8" data-categories="RmluYW5jZQ==" data-listing-date-sort="1746748800000" data-listing-file-modified-sort="1758468804207" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="558">
+<div class="thumbnail"><a href="./posts/08-simulation/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/08-simulation/monte-carlo.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/08-simulation/index.html" class="no-external">Simulation</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/08-simulation/index.html" class="no-external">
+Simulation can be done in a spreadsheet but is better done elsewhere. An easy example of the AI + coding approach is to simulate a retirement plan.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/08-simulation/index.html" class="no-external">
+<div class="listing-date">
+May 9, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="9" data-categories="RmluYW5jZQ==" data-listing-date-sort="1746835200000" data-listing-file-modified-sort="1758468804214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="807">
+<div class="thumbnail"><a href="./posts/09-mean-variance/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/09-mean-variance/mean-variance.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/09-mean-variance/index.html" class="no-external">Mean-Variance Frontier</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/09-mean-variance/index.html" class="no-external">
+Mean-variance optimization is one of those topics that has always been awkward to teach with spreadsheets. It is messy to define the portfolio variance in a spreadsheet for…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/09-mean-variance/index.html" class="no-external">
+<div class="listing-date">
+May 10, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="10" data-categories="QUklMjBPdmVydmlldw==" data-listing-date-sort="1746921600000" data-listing-file-modified-sort="1758468804218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1560">
+<div class="thumbnail"><a href="./posts/10-apis/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/10-apis/apis.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/10-apis/index.html" class="no-external">API Calls</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBPdmVydmlldw=='); return false;">AI Overview</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/10-apis/index.html" class="no-external">
+This HBS case, about implementing generative AI at Deloitte Canada, is a useful tool for teaching the benefits, risks, and strategies of implementing AI in a corporate…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/10-apis/index.html" class="no-external">
+<div class="listing-date">
+May 11, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="11" data-categories="RmluYW5jZQ==" data-listing-date-sort="1747008000000" data-listing-file-modified-sort="1758468804223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="519">
+<div class="thumbnail"><a href="./posts/11-alpha/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/11-alpha/alpha.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/11-alpha/index.html" class="no-external">Jensen’s Alpha</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/11-alpha/index.html" class="no-external">
+“Alpha” in this post will mean the CAPM alpha, that is, the intercept in the CAPM regression. It was first used to measure mutual fund performance by Michael Jensen, and…<em></em>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/11-alpha/index.html" class="no-external">
+<div class="listing-date">
+May 12, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="12" data-categories="RmluYW5jZQ==" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1758468804224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="381">
+<div class="thumbnail"><a href="./posts/12-fama-french/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/12-fama-french/factors.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/12-fama-french/index.html" class="no-external">Fama-French Factors</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/12-fama-french/index.html" class="no-external">
+The CAPM is intuitively reasonable and is widely used by companies to estimate their cost of capital, but it is well known to do a poor job of explaining average returns. I…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/12-fama-french/index.html" class="no-external">
+<div class="listing-date">
+May 13, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="13" data-categories="UHl0aG9uJTIwVG9vbHM=" data-listing-date-sort="1747612800000" data-listing-file-modified-sort="1758468804279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="978">
+<div class="thumbnail"><a href="./posts/18-scraping/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/18-scraping/scraping.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/18-scraping/index.html" class="no-external">Web Scraping</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/18-scraping/index.html" class="no-external">
+Getting data from websites is a task for which “AI + coding” can really increase efficiency. I use two examples to illustrate web scraping. The first is to extract a table…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/18-scraping/index.html" class="no-external">
+<div class="listing-date">
+May 19, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="14" data-categories="RmluYW5jZQ==" data-listing-date-sort="1747699200000" data-listing-file-modified-sort="1758468804235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="500">
+<div class="thumbnail"><a href="./posts/13-capital-budgeting/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/13-capital-budgeting/capital-budgeting2.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/13-capital-budgeting/index.html" class="no-external">Capital Budgeting</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/13-capital-budgeting/index.html" class="no-external">
+Spreadsheets are perfectly suited for capital budgeting exercises. Those exercises involve a minimal amount of data (data = assumptions mostly) and only basic arithmetic…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/13-capital-budgeting/index.html" class="no-external">
+<div class="listing-date">
+May 20, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="15" data-categories="RmluYW5jZQ==" data-listing-date-sort="1748822400000" data-listing-file-modified-sort="1758468804323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="686">
+<div class="thumbnail"><a href="./posts/form4/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/form4/form4.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/form4/index.html" class="no-external">Form 4’s from EDGAR</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/form4/index.html" class="no-external">
+This past spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares. Here, “insiders” means individuals…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/form4/index.html" class="no-external">
+<div class="listing-date">
+Jun 2, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-left" data-index="16" data-categories="UHl0aG9uJTIwVG9vbHM=" data-listing-date-sort="1752105600000" data-listing-file-modified-sort="1758468804303" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1358">
+<div class="thumbnail"><a href="./posts/24-tech-stack/index.html" class="no-external">
+
+<img loading="lazy" src="./posts/24-tech-stack/tech-stack.png" class="thumbnail-image" style="height: 8em;">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/24-tech-stack/index.html" class="no-external">The Ultimate Tech Stack for Researchers</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9uJTIwVG9vbHM='); return false;">Python Tools</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/24-tech-stack/index.html" class="no-external">
+Today, I’m departing from my usual topic of teaching and instead am going to discuss tools for researchers. I’m going way out on a skinny limb by claiming I know the best…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/24-tech-stack/index.html" class="no-external">
+<div class="listing-date">
+Jul 10, 2025
+</div>
+<div class="listing-author">
+Kerry Back
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -349,6 +989,13 @@ ul.task-list li input[type="checkbox"] {
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

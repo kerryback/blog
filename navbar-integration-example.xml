@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Teaching Finance with AI</title>
+<link>https://finance-with-ai.org/navbar-integration-example.html</link>
+<atom:link href="https://finance-with-ai.org/navbar-integration-example.xml" rel="self" type="application/rss+xml"/>
+<description>Teaching the use of generative AI in finance</description>
+<generator>quarto-1.8.24</generator>
+<lastBuildDate>Thu, 10 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Ultimate Tech Stack for Researchers</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/24-tech-stack/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/24-tech-stack/tech-stack.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Today, I’m departing from my usual topic of teaching and instead am going to discuss tools for researchers. I’m going way out on a skinny limb by claiming I know the best set of tools now available. But, I’m pretty sure that I do, and I want to share the information. Of course, I should emphasize “now available,” because, the way things are going, there may be tools six months from now that are an order of magnitude better.</p>
+<p>Here’s the setup for Windows users. Mac and Linux users can skip WSL. You need:</p>
+<ul>
+<li>Windows Subsystem for Linux (WSL)</li>
+<li>VS Code based IDE (VS Code, Cursor, or Windsurf)</li>
+<li>Claude Pro account</li>
+<li>GitHub account</li>
+<li>Overleaf Pro account</li>
+</ul>
+<p>What can you do with this setup? Of course, you can use Python for data handling, statistics, machine learning, visualization, and scientific computing. You can also write and edit papers (in LaTeX) within the same application in which you write and run Python code, which I find very efficient. You can share code with co-authors using GitHub, and you can link a Github repository to Overleaf to create and sync an Overleaf project, in case you or your co-authors sometimes want to write in Overleaf. What make this the ultimate stack is that Claude Code can manage everything.</p>
+<p>How do you start? Google and click through the installation process to install WSL like any other Windows program. Do the same for the VS Code based IDE.<sup>1</sup> Open the IDE and point-and-click to install the Python, Jupyter, Claude Code, Latex Workshop, WSL, and Quarto extensions.</p>
+<p>When you’re ready to work, use CTRL-SHFT-P to open the command palette in the IDE and enter “Remote-WSL: Connect to WSL” to run it inside WSL. WSL provides a Linux environment on a Windows PC. The Windows and Linux environments share the same file system: you can access your Windows files within WSL and vice versa. Remote-WSL connects to your Linux environment much the same as Remote-SSH can connect your IDE to a remote Linux environment, for example, a university server. You can create a working directory inside your Linux environment or you can access Windows folders using <code>/mnt/c/path_to_folder</code>, which means “mount your Windows C drive in the Linux environment.”</p>
+<p>Open a file or create a new file, and you will see the Claude icon appear in the top ribbon. Click it and Claude Code will open in a new panel. Claude Code is an agentic AI tool that can create and edit files, create, edit, and run Python scripts and Jupyter notebooks, search the web, download files, and run shell commands. Ask Claude Code to install Python, Quarto, Tex Live, Git, and the Git and GitHub command line tools. It can do all of that by executing shell commands.</p>
+<p>I think you will want to create a virtual environment for working in Python so as not to conflict with Python and Python packages built into WSL. Ask Claude Code to do it for you and to activate the new environment. Then ask it to install whatever Python packages you want: numpy, pandas, jupyter, matplotlib, etc.<sup>2</sup> Now, you’re ready to work. You can open a Jupyter notebook in the IDE or a blank Python script and start coding. Or, you can ask Claude Code to create the notebook or script for you and to start writing code. When you come back to work at a later time, connect to WSL, open the same folder, and ask Claude Code to activate the virtual environment.</p>
+<p>You can edit, compile, and preview LaTeX documents all in the IDE. If you find that you are missing packages you need, you can ask Claude Code to install them. You can even ask Claude Code to compile your LaTeX document. It will then compile, install any missing packages and recompile (asking permission as it does so). You can also ask Claude Code to read your LaTeX document and suggest edits.</p>
+<p>Why Quarto? Quarto is a document preparation system that can create PDF, HTML, and Word output files from a single source file. It is optional for this tech stack, but it is extremely useful. In addition to creating documents, it can also create websites (e.g., <a href="https://kerryback.com">this website</a>), books (e.g., <a href="https://book.derivative-securities.org">this online book</a>), and HTML slide decks (e.g., <a href="https://busi721-901.kerryback.com/a01-fvs-pvs.html#/title-slide">this slide deck</a>). It is in fact creating this blog post. It is based on the Markdown language, which is a simple and easy-to-learn language that supports LaTeX math. Even when I want to create a LaTeX document, I often write the first draft in Quarto and then ask Claude Code to translate it to LaTeX. It is just faster to write in Markdown than in LaTeX. For example, the Markdown version of <code>\begin{itemize}\item</code> is a simple <code>-</code>.</p>
+<p>Setting up Git and GitHub for the first time and then learning to use them used to be a pain. But now Claude Code can do it for you. It can install the command line tools it needs and then use them to initiate, commit, and push. All you need to do is to set up a (free) GitHub account and log in at the command line when Claude Code tells you to do so. If you’re working with a co-author, just ask Claude Code to pull the repository from GitHub and then push your changes.</p>
+<p><strong>Important</strong>: Claude Code will almost certainly create a generic python .gitignore file for you when it first creates a repository. This specifies folders, file types, and filenames that will not be tracked in Git and therefore will not be pushed to GitHub. Ask Claude Code to include csv files, Excel files, Stata files, or any other data file types you use in the .gitignore. You do not want to be pushing your data files to GitHub and Overleaf. In fact, trying to push a large data file (&gt; 100 MB) to GitHub will generate an error that is difficult to recover from without starting all over.</p>
+<p>To add Overleaf to your stack, log in to Overleaf, select a project or create a new one, and then from the Menu, select “Github Sync”. You’ll be prompted to authorize GitHub integration the first time you do this. After you’ve done so, you can choose “Github Sync” for any project and you’ll be prompted to select or create a GitHub repository to sync with. It is the same process as syncing with Dropbox, though you have to manually go to “Github Sync” each time you want to push Overleaf changes to GitHub or pull GitHub changes to Overleaf.</p>
+<p>A bonus feature of using Github is that you can use Github Pages for free hosting of the website you create in Quarto. Just ask Claude Code how to do it. You can even create online apps (as described <a href="https://finance-with-ai.org/posts/07-apps/">here</a>) by linking a GitHub repository containing an app.py file to <a href="https://koyeb.com">Koyeb</a>. All you need to do is to create a Koyeb account and then - guess what - ask Claude Code to do everything else!</p>
+<p>All of the instructions above could seem like too much to bother with, but remember that you can ask Claude Code for advice every step of the way. Just tell it what you want to do, and it will guide you through the process, doing much of the work on its own if you ask it to.</p>
+<hr>
+<p><em>First published on <a href="https://finance-with-ai.org">finance-with-ai.org</a></em> <br> <em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>VS Code is an open source IDE (integrated development environment) developed by Microsoft. Cursor and Windsurf are variations (forks) of VS Code designed to provide more efficient use of AI. I’m currently using Windsurf, which I like a bit better than Cursor, but they’re close, and VS Code with the GitHub Copilot extension is also okay.↩︎</p></li>
+<li id="fn2"><p>If you’re a corporate finance person, I recommend the linearmodels package written by <a href="https://www.economics.ox.ac.uk/people/kevin-sheppard">Kevin Sheppard</a>, or you could try pystata, which is a Python wrapper for Stata.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/24-tech-stack/</guid>
+  <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/24-tech-stack/tech-stack.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Form 4’s from EDGAR</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/form4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/form4/form4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>This past spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares. Here, “insiders” means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares). This was a good motivation for scraping the SEC EDGAR website.</p>
+<p>It’s useful to work through finding Form 4’s manually before explaining how to automate it with AI. The EDGAR website is a bit labyrinthine, but here is one route to Form 4’s.</p>
+<ol type="1">
+<li><p>Input a ticker in the search window at the <a href="https://www.sec.gov/search-filings">EDGAR home page</a>. That should generate a pop-up window.</p></li>
+<li><p>Click on the company’s name in the pop-up window. That should bring us to a home page for SEC filings for that company.</p></li>
+<li><p>Select “View Filings” at the bottom left.</p></li>
+<li><p>We should now be at a page that has a dropdown menu at the top left. The chosen item when we get to the page is “Exclude Insider Transactions.” Click the dropdown menu and select “Insider Transactions.”</p></li>
+<li><p>We should now be at a page listing Form 4’s, reverse ordered by date.</p></li>
+</ol>
+<p>There are two ways to select an individual Form 4 from the Insider Transactions page. The link “Statement of changes in beneficial ownership of securities” opens the Form 4 in our browser. The other method is to:</p>
+<ol type="1">
+<li><p>Click the link labeled “Filing” or “Open Filing.” It should take us to a page with the title “Filing Detail.”</p></li>
+<li><p>In the center of the Filing Detail page, we should see a table with three links, having the extensions .html, .xml, and .txt, respectively. The .xml link is the most useful for scraping. It contains the same information as the .html link, but it is formatted in a way that is easy for machines to read (though less easy than the .html link for people to read).</p></li>
+</ol>
+<p>Fortunately, we should not need to go through all of this pointing and clicking. We can ask Julius to do the following:</p>
+<ol type="1">
+<li><p>Go to <a href="https://www.sec.gov/files/company_tickers.json">https://www.sec.gov/files/company_tickers.json</a> and find the CIK (Central Index Key) for the ticker we want.</p></li>
+<li><p>Insert the ten-digit (zero-padded) CIK in the following URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK={cik}&amp;type=4&amp;dateb=&amp;owner=include&amp;count=1000. At that page, use Beautiful Soup to find all links that begin with “/Archives/edgar” and end with “htm.”</p></li>
+<li><p>For each of the links found in step 2, add “https://www.sec.gov” to the front of the URL, go to the page it links to, and find the link on that page that ends with “xml.”</p></li>
+<li><p>Read the .xml files into pandas dataframes and concatenate them.</p></li>
+</ol>
+<p>This may still seem complicated, but the LLM will do all of the work to code it. Also, once the code is working, it is easy for the LLM to wrap it in a Streamlit app. This automates the process: a user can input a ticker and immediately get all of the Form 4’s concatenated and downloaded as an Excel file. Once we have the dataframe or Excel file, it is simple to add up all buys and sells in, for example, the same quarter in each of two successive years. Consistent with the media reports, Tesla insiders sold a lot more shares in the spring of 2025 than they did in the spring of 2024.</p>
+<p>It is yet more complicated to get income statements, etc., from the SEC EDGAR site. There are a number of python libraries, all with similar sounding names, that are designed to work with EDGAR data. I have not found any of the free libraries to be easy to use and to work reliably. The <a href="https://sec-api.io/docs/sec-filings-render-api/python-example">sec-api</a> package works well, but it provides only 100 free queries and is currently $55 per month afterwards. I will explain in a future post how to get the XBRL data for financial statements from EDGAR, but that data is not easy to work with.</p>
+<hr>
+<p><em>First published on <a href="https://finance-with-ai.org">finance-with-ai.org</a></em> <br> <em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/form4/</guid>
+  <pubDate>Mon, 02 Jun 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/form4/form4.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Capital Budgeting</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/13-capital-budgeting/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/13-capital-budgeting/capital-budgeting2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Spreadsheets are perfectly suited for capital budgeting exercises. Those exercises involve a minimal amount of data (data = assumptions mostly) and only basic arithmetic, and we would like to view multiple tables (balance sheet, income statement, and cash flows) simultaneously, which we can do in a spreadsheet but not easily in python. How much value can AI add?</p>
+<p>I think students should explore this question, with guidance, and answer it themselves. A good starting point is to provide a basic spreadsheet template, which students likely already have from prior classes (here’s <a href="https://www.dropbox.com/scl/fi/n1m8eqauggl5jb65ufxha/template.xlsx?rlkey=dvzxl86c9tafsrb9d1oyrlz30&amp;dl=1">an example</a>) and then ask students to apply it to a specific situation. I like the <a href="https://hbsp.harvard.edu/product/BAB166-PDF-ENG">Sneaker 2013</a> case. It has all of the normal features but no tricky issues like how much to charge for using existing equipment that is surplus now but might have other uses in the future.</p>
+<p>We can ask students to chat with Julius, or whatever AI system they use, as they build the balance sheet, income statement, and cash flow forecasts. And, we can ask them to ask Julius to build a python model in parallel.</p>
+<p>When building the models, it is useful to tell Julius what the desired table layouts are and to ask Julius to show the tables each time they are revised (and to ask it to transpose its tables when it shows them, because the natural inclination in python in assigning columns and rows is the opposite of what we normally do in spreadsheets). If there are discrepancies between the spreadsheet and python models, then students can ask Julius to analyze and reconcile them. The error may frequently lie with the LLM, because it has misunderstood something or made an incorrect guess about something.</p>
+<p>Once the spreadsheet and python models are built, we can turn to sensitivity analysis. It is in this part of the process that AI may be of the most use. “AI + coding” can easily produce pivot tables and charts and help interpret the results.</p>
+<p>This should be a multi-day exercise, I think, mostly done in class so students can get assistance, help each other, vent frustrations, etc. At the end, the discusson about the value of AI should be interesting. Students may conclude that AI is of no value or requires too much extra time for the value it adds. This is itself a useful lesson. And, they will have gained additional practice in capital budgeting, which cannot be a bad thing. I think it is likely that most students will have found the collaborative aspect of working with AI valuable (though possibly too time consuming), if only because it reinforced that they were doing the right things all along. It is generally true that, as they say, two heads are better than one, and AI is an always available and <a href="https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough">infinitely patient</a> partner in whatever work we are doing.</p>
+<hr>
+<p><em>First published on <a href="https://finance-with-ai.org">finance-with-ai.org</a></em> <br> <em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/13-capital-budgeting/</guid>
+  <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/13-capital-budgeting/capital-budgeting2.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Web Scraping</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/18-scraping/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/18-scraping/scraping.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Getting data from websites is a task for which “AI + coding” can really increase efficiency. I use two examples to illustrate web scraping. The first is to extract a table from a web page. The second is to download multiple csv files from a website. It is fair to warn students that there are other examples that are more difficult, a point to which I’ll return at the end.</p>
+<p>This <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies">Wikipedia page</a> maintains a list of the S&amp;P 500 companies with information like ticker, sector, headquarters location, etc. If you ask Julius to go to the page, extract the table, and save it as an Excel file, it is highly likely that the task will be quickly accomplished with the aid of the pandas read_html function. Compared to manually typing the information into an Excel worksheet, this is an impressive time saver.</p>
+<p>It is worthwhile to explain to students how the read_html function is able to accomplish this. In my experience, many students have never seen HTML code and are unaware of how a web browser works. So, I right-click on the Wikipedia page, choose “View page source” to open up a window showing the HTML code, and explain that a web browser is a program that interprets the code to render the page that we see. Use “CTRL-F” on the page of HTML code to open up a search box as usual and input “&lt;table” to locate the table tag. I explain that the read_html function does the same thing. It then interprets the tags</p>
+<ul>
+<li>“tbody” = table body</li>
+<li>“tr” = table row</li>
+<li>“th” = table header</li>
+<li>“td” = table data</li>
+</ul>
+<p>to build the table in Excel.</p>
+<p>The second example I show students is getting short interest data from FINRA. FINRA has an <a href="https://www.finra.org/sites/default/files/Equity_Short_Interest_Data_File_Download_API.pdf">API</a>, but there is a solution that is easier for students to follow and that generalizes to other contexts. The page <a href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest/files">https://www.finra.org/finra-data/browse-catalog/equity-short-interest/files</a> provides a point-and-click interface to download the data for all stocks on a single reporting date. There are two reporting dates each month. Links to both dates are shown for the month selected in the dropdown menu. Clicking a date initiates a download of a csv file containing the data for that date. The filename convention is very simple - for example, the link for April 30, 2025 initiates the download of a file named “shrt20250430.csv.” What is the full URL of that file? If we find it, then we can go to it directly to get the data and avoid the point-and-click.</p>
+<p>I’ll use an example of the FINRA download page when April, 2025 is selected from the dropdown menu, but other cases follow the same format. Right-click on the page and select “View page source” as discussed before. Use CTRL-F to bring up the search box and insert “20250430.” That brings us to the URL for the shrt20250430.csv file. We see that the URL is <a href="https://cdn.finra.org/equity/otcmarket/biweekly/shrt20250430.csv">https://cdn.finra.org/equity/otcmarket/biweekly/shrt20250430.csv</a>. Inserting that URL in the address bar of a browser initiates the download of the file.<sup>1</sup></p>
+<p>Our goal is to automate the downloading of these files by looping over dates. The reporting days appear to be the 15th and last day of each month or the last trading days prior to those days. Instead of finding those days, we can ask Julius to try every possible day in a try-except block.<sup>2</sup> We can ask Julius to loop over all dates in a given date range, inserting the date in YYYYMMDD format into the URL above and using try-except blocks, to download and concatenate the files, and to save the complete data as a csv file.<sup>3</sup></p>
+<p>Unfortunately, web scraping is often not this easy, because many pages are dynamically generated using JavaScript. This means that the data we want is not part of the source code that we (and python) can see with “View page source” but instead is retrieved from elsewhere by executing the JavaScript code that appears along with HTML code in the source code. A good example is <a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/1318605/000110465925042659/tm252787d2_10ka.htm">this page</a> that can be found by following links on the <a href="https://www.sec.gov/search-filings">SEC EDGAR</a> website to the 10-K filed by Tesla with the SEC on April 30, 2025. The first table on that page is a listing of the directors of Tesla. If we open the source code with “View page source” and use CTRL-F to search for “Elon Musk,” we will get “0 results.” This is despite the fact that Musk appears in the table as a director. The reason is that the entire web page is filled by the JavaScript code having the ‘script language=“JavaScript”’ tag.</p>
+<p>There are python tools for executing the JavaScript code and retrieving the data, in particular the selenium library, but I have never had the patience to complete that type of task.<sup>4</sup> Perhaps AI agents using Anthropic’s <a href="https://www.anthropic.com/news/model-context-protocol">Model Context Protocol (MCP)</a> to control a web browser are the best tool for that type of exercise now. More on that later.</p>
+<hr>
+<p><em>First published on <a href="https://finance-with-ai.org">finance-with-ai.org</a></em> <br> <em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>By the way, the “biweekly” in the URL is a misnomer; the reporting dates are twice monthly, not every other week.↩︎</p></li>
+<li id="fn2"><p>When an error (for example, trying to download a nonexisting file) occurs inside the “try” component of a try-except block, execution is not broken. Instead, the “except” clause is executed - here, the “except” action will be “pass.”↩︎</p></li>
+<li id="fn3"><p>Excel can read csv files. You could ask instead for an Excel file, but the data may surpass the 1 million row limit of Excel.↩︎</p></li>
+<li id="fn4"><p>It is not obvious that Julius is the best tool for this anyway, because it seems impossible to install the chromium webdriver in Julius and the available firefox webdriver seems to have some limitations.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/18-scraping/</guid>
+  <pubDate>Mon, 19 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/18-scraping/scraping.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Fama-French Factors</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/12-fama-french/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/12-fama-french/factors.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>The CAPM is intuitively reasonable and is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3994848">widely used by companies to estimate their cost of capital</a>, but it is well known to do a poor job of explaining average returns. I like to show students this <a href="https://learn-investments.rice-business.org/capm/sml-industries">interactive plot</a> of estimated betas and average returns for the Fama-French 48 industries. Hovering over the data points brings up the industry names. As students should expect, we see tobacco, alcoholic beverages, and defense among the low beta industries, and we see steel and construction among the high beta industries. However, we see very little difference between the average returns of low beta industries and high beta industries. In other words, the empirical security market line is too flat, as is well known. Other pages on the same website show the <a href="https://learn-investments.rice-business.org/factor-investing/quintiles">returns</a> of characteristic-sorted portfolios and their <a href="https://learn-investments.rice-business.org/capm/two-way-capm">CAPM alphas and t-statistics</a>, drawing on <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Ken French’s data library</a>.</p>
+<p>The Fama-French model is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3994848">seldom used by companies to estimate their cost of capital</a>, but it and other factor models are often used as attribution analysis when evaluating the performance of fund managers. To conduct such an analysis, we can follow the same process as for the <a href="https://finance-with-ai.org/posts/04-capm/">CAPM regression</a> and <a href="https://finance-with-ai.org/posts/11-alpha/">Jensen’s alpha</a> but asking Julius to get the five Fama-French factors from French’s data library and to regress excess returns on the five factors. We can calculate the contribution of each factor to the average fund (or stock) return by multiplying the factor beta by the mean factor value over the sample.</p>
+<p>This exercise could obviously be done in a spreadsheet, but it is a different experience doing it with AI + python. With AI + python, students can get all the data themselves quickly, and it is also quick to run the regression and compute factor contributions. Because we don’t have to spend time explaining how to implement the calculations, there is more time to discuss why it could be reasonable to regard the Fama-French factors as proxies for risks that investors care about and which are consequently priced - or to discuss any other view one might have about the Fama-French model. Plus, the LLMs know about the Fama-French model, and, at least with Julius, their chatting will reinforce students’ learning.</p>
+<hr>
+<p><em>First published on <a href="https://finance-with-ai.org">finance-with-ai.org</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/12-fama-french/</guid>
+  <pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/12-fama-french/factors.png" medium="image" type="image/png" height="100" width="144"/>
+</item>
+<item>
+  <title>Jensen’s Alpha</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/11-alpha/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/11-alpha/alpha.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>“Alpha” in this post will mean the CAPM alpha, that is, the intercept in the CAPM regression. It was first used to measure mutual fund performance by Michael Jensen, and, when used in that context, it is called Jensen’s alpha. It is worth stressing to students that a positive alpha does not mean that an investor should move all of his or her money into the fund. A fund can have a positive alpha but have a lower Sharpe ratio than the market. In fact, a fund has a positive alpha if and only if its Sharpe ratio is larger than the market’s Sharpe ratio <em>multiplied by the correlation between the fund and the market</em>. Because correlations are less than one, the Sharpe ratio hurdle for a fund to earn positive alpha is lower than the market Sharpe ratio. An interactive figure illustrating this principle can be found <a href="https://learn-investments.rice-business.org/capm/alphas-sharpes">here</a>. An extreme example is a fund with a zero beta. Such a fund has a positive alpha if and only if its Sharpe ratio is positive, meaning that it beats the risk-free return on average.</p>
+<p>While investors should not necessarily move all of their money to a positive alpha fund, they should move some of their money to the fund, assuming they care only about mean and variance and not higher moments. Mean-variance efficiency can be improved by shifting money from the market to a positive alpha fund. This is shown by Dybvig and Ross (Journal of Finance, 1985).</p>
+<p>In an <a href="https://finance-with-ai.org/posts/04-capm">earlier post</a>, I explained how to use Julius to run the CAPM regression, using stock prices from Yahoo and using market and risk-free returns from <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">French’s data library</a>. We can do the same with a mutual fund ticker. Rather than using the most recent 60 months as in the earlier post, I prefer to run the regression for this exercise using all available data. Then, we can ask Julius to compute the beta-hedged mutual fund return each month. By beta hedging, I mean taking out the market exposure as R - beta * (Rm - Rf). According to the CAPM, the average value of this beta-hedged return should be the risk-free return Rf. We can ask Julius to compound the risk-free returns and compound the beta-hedged mutual fund returns over time and plot them. If the beta-hedged returns outperform the risk-free returns, then the fund earned alpha. It is useful to ask for a log scale on the y axis in the plot. Then, we can easily see the periods in which the fund did better than it should have given its market exposure (the slope of the hedged fund curve is greater than the slope of the risk-free curve) and the periods in which it did worse.</p>
+<p>A good example for this exercise is Fidelity Magellan (ticker=FMAGX). The fund was an extreme outlier in terms of performance under the stewardship of Peter Lynch but underperformed substantially afterwards. Of course, we expect outliers in a random sample.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/11-alpha/</guid>
+  <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/11-alpha/alpha.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>API Calls</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/10-apis/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/10-apis/apis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>This <a href="https://hbsp.harvard.edu/product/HEC382-PDF-ENG">HBS case</a>, about implementing generative AI at Deloitte Canada, is a useful tool for teaching the benefits, risks, and strategies of implementing AI in a corporate environment. Efficiency is of course the key benefit, and data security, client trust, and compliance are key concerns. The general strategy for implementation involves creating a custom channel through which all employees chat with an LLM, a channel that passes relevant corporate standards to the LLM in each chat, that allows monitoring, and that includes a guarantee of data privacy. To complement the case, I show students that they can use Julius to create a mini version of this, namely a custom chatbot that adds whatever context they want to each prompt. This can be done with a custom GPT from OpenAI, but seeing code that produces a custom chatbot makes everything more transparent.</p>
+<p>To create this, we need an API key from an LLM provider. As of this writing, OpenAI provides keys even on free accounts. Billing is on a per-use basis, and it is miniscule at demonstration scales. As I will explain, there are also API keys for LLMs that are completely free. Julius provides a facility for storing an API key as a “secret key.” It is not exposed to the LLM during the coding that creates the custom chatbot.</p>
+<p>To start the exercise, it is useful to show students the code that executes an API call without all the surrounding code that creates an app. I gave Julius the following example prompt:<sup>1</sup> “send the following to openAI GPT-4 using my api key that is stored as a secret key - What is the best type of pizza? Answer in pig Latin.” Here is the code that Claude 3.5 wrote in response:</p>
+<pre><code>from openai import OpenAI
+import os
+
+# Initialize the OpenAI client with the API key
+client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
+
+# Send the query
+response = client.chat.completions.create(
+    model="gpt-4",
+    messages=[
+        {"role": "user", "content": "What is the best type of pizza?  \
+        Answer in pig Latin."}
+    ]
+)
+
+# Print the response
+print("Response:", response.choices[0].message.content)</code></pre>
+<p>We can see from the code that the messages will be sent to OpenAI’s GPT-4 (note that the LLM you’re using in Julius will balk if you ask for an API call to an LLM that appeared after the training of your Julius LLM - for example, you can’t get GPT-o3 using Claude 3.5 - but you can edit the code in Julius to select the model you want). The “messages” object is a list containing a single dictionary (it can have many more, as we will see in a moment). The dictionary has two keys: “role” and “content.” The response object contains the LLM’s response, and the content of the response is accessed as response.choices[0].message.content. When the code is executed, the computer executing it sends the messages, gets the response, and prints the content of the response. All of the work is done by the “client” object, which is created by the OpenAI function, using my API key that the os.environ.get function reads from its “secret key” storage. What I got from Julius after the code executed was “The GPT-4 model responded with: Response: Epperonipay.””</p>
+<p>To create a custom chatbot, it is enough to say something like “Create a custom chatbot as a streamlit app. It should send prompts to GPT-4 using my openai api key that is stored as a secret key. The following additional context should be provided: You are a business professional. Answer in a business-like fashion.” Of course, you could also do more interesting things, like requesting an answer in Pig Latin perhaps. The heart of the code that Claude 3.5 wrote for me is</p>
+<pre><code>messages = [
+        {"role": "system", "content": 
+        "You are a business professional.  \
+        Answer in a business-like fashion."}
+    ]
+    
+    while True:
+        # Get user input
+        user_input = input("You: ").strip()
+        
+        # Check for quit command
+        if user_input.lower() == 'quit':
+            break
+        
+    # Add user message to history
+    messages.append({"role": "user", "content": user_input})
+    
+
+        # Get response from OpenAI
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=messages,
+            stream=True
+        )
+        
+        # Print assistant response
+        print("Bot: ", end="", flush=True)
+        full_response = ""
+        
+        # Stream the response
+        for chunk in response:
+            if chunk.choices[0].delta.content is not None:
+                content = chunk.choices[0].delta.content
+                print(content, end="", flush=True)
+                full_response += content
+        
+        print()  # New line after response
+        
+        # Add assistant response to history
+        messages.append({"role": "assistant", "content": full_response})</code></pre>
+<p>This initializes the message list with the context I provided about being a business professional. Then it sets up a “while” loop that runs until the app is exited. Within the loop, each new prompt is added to the message list and the now longer list is sent to the LLM. The LLM response is printed each time and added to the message list also. In this way, the LLM receives the entire chat history following each user prompt.</p>
+<p>On the first occasion that I requested this Streamlit app from Julius, I received instead a python script (a .py file) that when executed in my terminal created a chatbot running in the terminal. That is interesting too. If/when you do get a Streamlit app and if you want to deploy it to the cloud, take advantage of the cloud provider’s secret key procedure to maintain security of your API key.</p>
+<p>We can get free access to a number of open source LLMs via services like <a href="https://huggingface.co/">Hugging Face</a> and <a href="https://openrouter.ai/">Open Router</a>. Open Router describes itself as “The Unified Interface for LLMs.” It provides access to over 300 LLMs as of this writing. It is worth visiting Open Router in class just to show students the number of LLMs that have been created.</p>
+<p>The essence of the Open Router service is that we get an API key from the provider(s) we want to use, store the key(s) at Open Router, and also get an API key from Open Router. We direct all our API calls to Open Router, specifying an LLM to use, and Open Router forwards the calls to the LLM. This provides a unified syntax for API calls (Open Router uses the OpenAI standard). For someone who is not a heavy user of API calls, the prime benefit of using Open Router is that it provides free access to many open source LLMs.</p>
+<p>I take this discussion as an opportunity to show students <a href="https://replit.com/~">Replit</a>, which is an AI + coding platform focused on app creation. Before class, as an illustration, I created a <a href="https://guardian-pulse-kerryback.replit.app/">chatbot app</a> that scrapes headlines from <a href="https://www.theguardian.com/us">The Guardian</a> and sends them to the free LLama 4 Scout model for a determination as to whether it is a good, bad, or mixed news day and then allows for additional chatting. It is, of course, just a toy, but it is a concrete example of the chatbot creation process. By the way, I was happy I did this before class rather than during class, because Replit experienced a frustrating amount of confusion between OPENAI_API_KEY and OPEN_ROUTER_API_KEY. LLMs are usually very smart but can sometimes be surprisingly dumb.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Pig Latin is a very old English language variation, mostly of interest to children, that moves any initial consonant phoneme of a word to the end and also adds “ay” to the end of each word. I think I should credit this example to some blog post that I read sometime, but which post escapes me.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>AI Overview</category>
+  <guid>https://finance-with-ai.org/posts/10-apis/</guid>
+  <pubDate>Sun, 11 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/10-apis/apis.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Mean-Variance Frontier</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/09-mean-variance/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/09-mean-variance/mean-variance.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Mean-variance optimization is one of those topics that has always been awkward to teach with spreadsheets. It is messy to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with Excel’s matrix algebra functions that operate on arrays. Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet. I don’t think we actually expect students to do mean-variance analysis in a spreadsheet after they graduate - we’re just teaching the concept (I think). But, we can now teach the concept without the clunkiness of setting it up in a spreadsheet.</p>
+<p>We want to generate the classic figure above and to find the portfolios crresponding to the efficient mean-variance combinations. I prefer to start with the tangency portfolio, because it is simpler than finding the frontier of only risky assets, and because it is where we want to end up anyway. We can specify the risk-free rate, the expected returns of the assets, the standard deviations of the assets and their correlations and just ask Julius to compute the tangency portfolio. The LLMs know how to do it. With high probability, they will generate code to compute the familiar Sigma inverse times mu and then divide by the sum of the elements of that vector so the weights sum to one (it is possible but much less likely that they will use a numerical optimization algorithm from scipy to maximize the Sharpe ratio). This means that we have to explain Sigma inverse times mu.</p>
+<p>I take a very hand-waving approach to explain the formula. I remind students first that at the top of a hill the slope must be zero and second that the slope of a function is its derivative, so a maximum is the solution of an equation “derivative = 0.” Of course, they have all seen that at some point in their lives. I then show them (without deriving) the equations for maximizing the Sharpe ratio with three risky assets:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/09-mean-variance/equations.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>I explain that this system of equations is written as Sigma times w equals risk premia, explaining matrix multiplication briefly, and then say that it can be solved for w with a matrix version of “dividing by” Sigma. That seems to give enough intuition for the formula w = Sigma inverse times risk premia.</p>
+<p>Asking next for the global minimum variance portfolio is a natural thing to do. The LLM is likely to use the calculus/algebra solution for that also. It is of course the same process as calculating the tangency portfolio but with the risk premia replaced by a vector of constants, for example, a vector of 1’s. If we then ask for the portfolio of only risky assets that achieves a target expected return with minimum risk, we are more likely to see the LLM use an optimizer from scipy. Here, too, I have seen Claude use the calculus/algebra solution, but it is a bit more complicated and evidently appeared less often in the training data than did the solution for the tangency portfolio.</p>
+<p>We can also impose position limits, including short sales constraints. In fact, the “no short sales” constraint seems to have appeared so often in the training data that the LLM may impose it when it uses an optimizer even if you have not asked for it. It pays to check the code. If students look, they should be able to decipher the code well enough to see if nonnegativity constraints were imposed. It is also pretty reliable to just ask the LLM if it used nonnegativity constraints, or you may want to say explicitly not to impose them if you don’t want them (to get it to obey, you may need to be emphatic: “It is important that you do not impose short sales constraints. Please pay attention to this.”)</p>
+<p>Mean-variance optimization is used in practice mainly for strategic asset allocation, so it is good to demonstrate it on asset classes. Yahoo ETF data is an easy source, though the time series is short. <a href="https://pages.stern.nyu.edu/~adamodar/">Aswath Damodoran</a> maintains some data on his website at NYU, in particular <a href="https://pages.stern.nyu.edu/~adamodar/pc/datasets/histretSP.xls">this</a>. If students want to check their results, they could do so with <a href="https://learn-investments.rice-business.org/portfolios/tangency">this page</a> and <a href="https://learn-investments.rice-business.org/portfolios/optimal-N">this</a> from the website I created with Kevin Crotty. I’ve always liked the <a href="https://hbsp.harvard.edu/product/211004-PDF-ENG?Ntt=harvard%20management%20company">Harvard Management Company</a> case from HBS for teaching mean-variance analysis, because it provides some perspective on the unreliability of unconstrained mean-variance optimization (and the fact that imposing position constraints may mean that you just get your constraints back as the solution).</p>
+<p>Please share your thoughts in the comments below.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/09-mean-variance/</guid>
+  <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/09-mean-variance/mean-variance.png" medium="image" type="image/png" height="104" width="144"/>
+</item>
+<item>
+  <title>Simulation</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/08-simulation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/08-simulation/monte-carlo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Simulation can be done in a spreadsheet but is better done elsewhere. An easy example of the AI + coding approach is to simulate a retirement plan.</p>
+<p>A simple retirement plan specifies an initial account balance, the number of years and the amount to be saved each year until retirement, the number of years and the amount to be withdrawn each year after retirement, and an investment return each year. We can bypass worrying about inflation by doing everything in real terms: the deposits and withdrawals should be specified in today’s dollars, and the investment return should be the real rate of return. Taxes are complicated and important. It would certainly be feasible to do a detailed analysis of taxes for different investment vehicles (along the lines of <a href="https://learn-investments.rice-business.org/taxes/tax_vehicles">this</a>), but, since teaching personal finance is not my real goal, I just tell students to think of the deposits and withdrawals as being pre-tax, as in a 401k.</p>
+<p>One way to approach the simulation is to ask for a python function to be created that takes an initial account balance, a list of deposit amounts, a list of withdrawal amounts, and a list of investment returns as inputs and produces a table with five columns: the beginning-of-year balance, the % investment return, the dollar investment gain or loss, the deposit or withdrawal amount, and the end-of-year balance. The reason for outputting an entire table rather than just end-of-year balances is that it makes it easier to check that the timing and calculations are done correctly.</p>
+<p>We don’t have to type the lists that are inputs to the function. We can say, for example: “The initial balance is $40,000, there will be 30 deposits starting at $5,000 and growing by 4% per year, there will be 25 withdrawals of $100,000 each, and the investment return will be 10% each year. Use the function to calculate the table and show it.” We can do a small example to check that the function is working correctly before running the simulation. Julius has a <a href="https://julius.ai/docs/data-explorer/overview">data viewer</a> that makes it easy to examine the results. We can also ask for the results to be output as an Excel file (which produces a file with only numbers, not formulas).</p>
+<p>Once the function is working correctly, we can ask for a simulation. We can specify the initial balance and deposit and withdrawal lists to be used in the function and then say, for example: “Simulate the investment returns each year as random draws from a normal distribution with a mean of 10% and a standard deviation of 10% and then apply the function. Retain the terminal account balance. Repeat this 1,000 times.” Then, we can ask for the mean or median of the terminal balances, a histogram, etc. The histogram is useful because it shows the positive skewness induced by compounding, which will also show up in the mean being larger than the median. This is a good opportunity to talk about the difference between arithmetic and geometric average returns and the effect of volatility on the difference.</p>
+<p>This is a nice example to build into an app. Everyone needs to do retirement planning, so students may be able to impress friends and family.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/08-simulation/</guid>
+  <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/08-simulation/monte-carlo.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Creating Apps</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/07-apps/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/07-apps/apps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>After the last session of my class in the spring, a student came up to me and said “I want to thank you. I never knew anything about programming, and now I can create apps. It’s amazing!” We have a few years, I think, when we can be the first to show students the power of AI + coding and have these rewarding moments. But soon everyone will know, and I’m not sure what we’ll do then. Maybe <a href="https://www.chronicle.com/article/are-you-ready-for-the-ai-university">AI will teach our courses</a>.</p>
+<p>A significant upside to app creation is that it makes the code permanent. Using AI + python to do a task repeatedly runs into the issue that there is some randomness in LLM code generation. The code will not be exactly the same each time. Given that it is important to verify that the code is correct (for example, by running it on small examples), this poses a problem. Putting working code in an app avoids this problem. It also makes the process of using the code simpler - there is no need to write a prompt each time.</p>
+<p>Another important feature of app creation is that it enables us to ensure data privacy. By creating an app that is run locally, we can avoid ever exposing our data. We can use a small artificial dataset when creating the app, and then we can run the app on the real data on our own computer, even if it is disconnected from the internet.</p>
+<p>The streamlit, gradio, and dash libraries allow us to create web apps using only python code. The libraries provide python wrappers around HTML, CSS, and JavaScript. AI allows us to create web apps using those libraries just by prompting, because LLMs know the streamlit, gradio, and dash syntax. There are other tools (like <a href="https://replit.com/">Replit</a>) that directly take user prompts and write HTML, CSS, and JavaScript as well as python. I show students Replit but stick primarily with Julius and streamlit or gradio.</p>
+<p>I got some experience in creating apps when my colleague <a href="https://kevin-crotty.com/">Kevin Crotty</a> and I built an interactive app to illustrate financial concepts: <a href="learn-investments.rice-business.org">Learn Investments @ Rice Business</a>. It wasn’t long after finishing it that I realized that pretty much everything we had painstakingly constructed (with the great help of the dash and plotly libraries) could be generated by AI + coding with very little effort. Oh, well. At least I still have my day job.</p>
+<p>To illustrate app creation for students, I return to the <a href="https://finance-with-ai.org/posts/04-capm">cost of equity</a> calculation and ask Julius to create a streamlit (or gradio, which is very similar) app that allows the user to input a ticker, computes the cost of equity as before, and creates and downloads the <a href="https://finance-with-ai.org/posts/05-building">PowerPoint deck</a> as before.</p>
+<p>Creating this app is a multi-step process. As discussed in a <a href="https://finance-with-ai.org/posts/04-prompts/">previous post</a>, a safe way to do this is to ask for a python function to be created at each step and saved as a .py file. For example, (i) a function that takes a user-supplied ticker, estimates the beta and returns the beta and a regression plot, (ii) a function that takes a beta and returns a dictionary with the risk-free rate, beta, market risk premium, and cost of equity as the keys and the calculated values as the values, and (iii) a function that takes the regression plot and dictionary as inputs and returns a PowerPoint deck. As step (iv), we can ask Julius to put these together to create an app that allows the user to input a ticker and downloads the PowerPoint deck.</p>
+<p>Unfortunately, as of this writing, Julius cannot directly run the streamlit app. It is necessary to ask for an app.py file, download the app.py file, and run it on your own computer. To do this, you need python installed on your computer. I’m hopeful that the Julius developers will soon make this simpler. In the meantime, you can ask Julius how to install python, and you can ask Julius how to run the app on your own computer. I spend time in class walking students through the process (I also recorded some videos explaining the process, but I’m doubtful anyone ever looked at them!).</p>
+<p>Once the app is running on your computer, there is an option to deploy it in the cloud. The easiest options are the free <a href="https://streamlit.io/cloud">Streamlit Community Cloud</a> for streamlit and the free <a href="https://huggingface.co/spaces">Hugging Face Spaces</a> for gradio. However, this also takes a couple of steps (for example, creating a github repo), so I’ve done the deployment for students myself when they want it. Several students wanted to deploy their course projects to show to prospective employers. Free deployment on either Streamlit or Hugging Face has the downside that the app is “put to sleep” after a couple of days of inactivity and has to be manually restarted. For permanent deployment, I deploy to <a href="https://www.koyeb.com/docs/deploy/streamlit">Koyeb</a> though there are other similar services. Here is the <a href="https://costofequity.koyeb.app/">cost of equity app</a> on Koyeb, the <a href="https://github.com/finance-with-ai/streamlit-cost-equity">github repo</a> it was deployed from, and the <a href="https://julius.ai/s/9ac52a0d-669c-47b0-a4f0-40d370e3ad35">Julius thread</a> that created it.</p>
+<p>Cloud deployment is often unnecessary. If someone creates an app to automate a task, they do not need to deploy it in the cloud. They can simply run it on their own computer each time they need to perform the task.</p>
+<p>Creating apps is not the first thing I would do in a course, because running an app either locally or in the cloud does take a few extra steps. But, I think it is an important thing to show students at some point. Post in the comments below to let us know how it goes if you try it or to let us know if this post omits some good app-creation options.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/07-apps/</guid>
+  <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/07-apps/apps.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
+<item>
+  <title>Building Stuff</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/05-building/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/05-building/building.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>A big advantage of coding (and using AI to write code) is that things can be automated. A student this spring told me that a friend of his in the finance industry had just used AI to reduce the time required for a certain task he often had to do from two days to two hours. There are many stories like that. To illustrate automation in a simple setting, we can use the <a href="https://finance-with-ai.org/posts/04-capm">CAPM calculation</a> to show how PowerPoint decks can be created with AI + python.</p>
+<p>PowerPoint decks can be created in python with the python-pptx library. The details are not important, because the LLMs know them. I ask Julius to create a PowerPoint deck with two slides, the first being a scatterplot representing the regression, and the second being a table showing the cost of equity calculation. Usually, it delivers a nice looking deck without any further prompting, but you may want to fine tune it in an iterative way. It will probably use the seaborn regplot function to produce the scatterplot with the regression line. Sometimes it will show a confidence interval band around the regression line representing the standard errors in the coefficient estimates. When this happens, I ask Julius to remove it, but you may have a different preference.</p>
+<p>We can also create Word docs. It is interesting to ask for the same plot and table and for some discussion of the results to be saved as a Word doc. Python can create Excel files, with multiple worksheets, but it can only produce tables of data. It does not write Excel formulas into a workbook. There are other AI tools for working with Excel files, but they are not the subject of today’s post.</p>
+<p>To truly automate the creation of the PowerPoint deck or Word doc, we can embed the code in an app that runs on our computer or in the cloud. That will be the subject of a later post.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/05-building/</guid>
+  <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/05-building/building.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Prompt Engineering (or Not)</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/06-prompts/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/06-prompts/prompts.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>I use <a href="https://mentimeter.com/">Menti</a> surveys periodically to ask students what they would like to learn more about, and how to write effective prompts frequently shows up. In the first bit of time after ChatGPT 3.5 was introduced, there was a lot of chatter online about prompt engineering. This seems to have died down somewhat, and for good reason. The models are so good now that they don’t generally require any special prompting. In particular, you do not need to tell Julius “you are an expert coder …” If any role-setting is even needed now, which is doubtful, I think it must be supplied in the context provided by Julius to the LLMs.</p>
+<p>I take advice on this topic from <a href="https://mgmt.wharton.upenn.edu/profile/emollick/">Ethan Mollick</a>, a Wharton management professor who studies these things and whose blog, <a href="https://www.oneusefulthing.org/">One Useful Thing</a>, you should certainly follow, if you do not already. I direct students to one of Mollick’s posts in particular, which discusses <a href="https://www.oneusefulthing.org/p/getting-started-with-ai-good-enough">good enough prompting</a>. Mollick suggests that instead of worrying about how to write prompts, people should treat an LLM as an “infinitely patient coworker.” I find that I naturally come back to this several times in my course, reminding students “Remember what Ethan Mollick said: treat AI as an infinitely patient coworker.” Actually, I modify the quote from “coworker” to “colleague.” The term “coworker” suggests a peer to me, but AI can serve equally well as a senior colleague who mentors, or a junior colleague who assists, or a peer who collaborates. And, it can move seamlessly from one to the other.</p>
+<p>A question students ask is whether they should give specific instructions in a chat, or just a brief statement of what they want and then see what they get. Here, I say “think of AI as an ininitely patient assistant.” How detailed should the instructions be that you give an assistant? You can be very detailed, but that is a waste of time if the assistant is competent to do the task alone. On the other hand, if you are not detailed, you may find the assistant does something different from what you want, and you have to send him/her/it back to do it again. This process could go on for quite awhile and end up being a waste of time. How to know which path to follow? You need to know your assistant. So, I encourage students to experiment to learn the AI’s capabilities. Some tasks will have appeared frequently in its training data, and it will need very little instruction. It may be less familiar with others and need more. Here, I stress the “infinitely patient” part. You can experiment all you want.</p>
+<p>If you find yourself on an iterative path of correcting errors, it can often be useful to just start a new chat and this time give detailed instructions. The frustrating part about correcting errors is that the LLM will regenerate code each time and sometimes, when it tries to fix one error, it introduces new errors (I mean doing something other than what you want, not syntax errors that it will fix on its own) in code that worked fine before. If this begins to happen, it is probably time for a fresh start.</p>
+<p>What about tasks that involve multiple steps? Should you ask for everything you want in a single prompt or just ask for one step at a time? Again, I ask students to experiment. What they consistently report back to me is that it is better to just ask for one step at a time. However, one thing to keep in mind is that an LLM can be somewhat forgetful. Even though the context windows are large enough today that an LLM will be able to re-read your entire chat each time you prompt it, it cannot be equally attentive to everything in the chat. So, it can be helpful to prompt it in later steps to “use this that you got before and that that you got before and …” instead of relying on it knowing what it should use from previous steps. In order to ensure that the LLM correctly recovers what it created in previous steps, I find it very helpful to structure each step as: “create a python function that … and save it as a .py file”” Then in subsequent steps, I can say “read the .py file and use the python function to …” Then, each successive step can be taken without prior code being rewritten.</p>
+<p>What do you think? What works for you? Let us know in the comments below.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>AI Overview</category>
+  <guid>https://finance-with-ai.org/posts/06-prompts/</guid>
+  <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/06-prompts/prompts.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>CAPM</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/04-capm/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/04-capm/capm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Calculating betas is an easy exercise to do with Julius. We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM. This exercise provides the opportunity to explore <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Ken French’s data library</a> while getting market excess returns and risk-free rates.</p>
+<p>To estimate betas, we need stock excess returns and market excess returns. I follow the usual academic convention of monthly returns over a 5-year period. To get monthly stock returns we can use yfinance (see <a href="https://finance-with-ai.org/posts/02-online-data/">here</a>). To get adjusted closing prices at a monthly frequency, simply ask Julius for them (the LLM will either use period=“1mo” in yf.download or it will use the pandas resample method to downsample daily prices to monthly prices). Ask for a bit more than five years, because we may lose some months when merging with the market data. Then compute returns as percent changes.</p>
+<p>To get market excess returns and the risk-free rate, we can use French’s data library. It’s interesting to start by asking Julius to list the datasets available in French’s data library. Then ask Julius to get the monthly three factors using pandas-datareader starting in 1926 and to compute the mean of Mkt-RF for the market risk premium estimate. You’ll want to annualize the market risk premium estimate (or you could just ask for the annual factors and the mean of annual Mkt-RF). If you don’t explicitly ask for pandas-datareader to be used, the LLM may write code to directly read the csv files on French’s website into pandas dataframes, which doesn’t work well, because each file contains text and contains multiple tables (monthly, annual, etc.). It will recover from that error, but it saves time to ask for pandas-datareader at the outset.</p>
+<p>To estimate betas, we want to first do an inner merge of the Fama-French data with the stock return data. There are two issues. First, the stock return data will be in decimals and the Fama-French data is in percents. The LLM will probably notice that, but it is good to explicitly ask to convert the stock returns to percents or the Fama-French data to decimals (your choice). The second issue is that the dates will be in different formats. Pandas-datareader will return the Fama-French dates in what is called the pandas period format, whereas the stock return format will be in the pandas timestamp format. Julius will figure this out also, but it may speed up the merge to warn it that the date formats will need to be reconciled. Once the data is merged, keep the last 60 months for which there are no missing data, calculate excess stock returns by subtracting RF (which is in the Fama-French three factor dataset), and then ask Julius to run the regression.</p>
+<p>Once the beta is estimated, the final step is to get the current risk-free rate. I ask Julius to get the latest value of the three-month T-bill yield from FRED, but it can get different rates if you prefer something else. At this point, you can just ask Julius to compute the cost of equity. The LLMs know the CAPM formula.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Finance</category>
+  <guid>https://finance-with-ai.org/posts/04-capm/</guid>
+  <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/04-capm/capm.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
+<item>
+  <title>Online Data</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/02-online-data/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/02-online-data/online.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>We can upload files to Julius as with other chatbots. We can then chat about the data with the benefit of python. In fact, Julius.ai started life as the “Chat with Your Data” plug-in for ChatGPT. However, Julius can also grab online data. Computing stock returns from <a href="https://finance.yahoo.com/">Yahoo Finance</a> data is a good place to start. The yfinance library is the best python library for accessing Yahoo Finance. The data begins in 1970. To get the longest possible history for a ticker, we can ask Julius to get data starting in 1970. We can specify other dates, and we can also specify the frequency of the data - daily, weekly, monthly, quarterly, annual.</p>
+<p>Yahoo Finance computes dividend and split adjusted closing prices. We can compute total close-to-close returns, including dividend returns, as percent changes of the adjusted closing prices.<sup>1</sup> The yfinance library recently changed to returning the adjusted prices by default rather than returning standard (split-adjusted) prices. The confusing part is that it now calls the adjusted prices returned by default “Close” rather than the former “Adj Close.” I recommend prompting the LLM to use the latest version of yfinance and explicitly prompting the LLM to get the “Close” instead of “Adj Close.<sup>2</sup>”</p>
+<p>A more complex but also more transparent solution to the Close/Adj Close confusion is to prompt the LLM to use the yfinance download function with auto_adjust set to False (this was the old behavior) and to get both the “Close” and “Adj Close.” Percent changes in “Adj Close” are what we want for returns. To show students the difference between the two, we can ask for percent changes in both and then filter to dates where the percent changes differ by more than 0.00001 or so. Those dates will be the ex-dividend days. The difference between the two percent changes on those days is the quarterly dividend yield.</p>
+<p><a href="https://fred.stlouisfed.org/">FRED</a> (Federal Reserve Economic Data) is a standard source for macroeconomic data, including GDP, exchange rates, Treasury and corporate bond yields, crude oil prices, etc. The pandas-datareader library is the best python library for accessing FRED. We can go to the FRED website and find the data we want, but Julius is quicker. For example, “get the history of 10-year Treasury yields from FRED using pandas-datareader at a daily frequency and plot them.” In subsequent posts, we’ll explore other online data, including Ken French’s data library and the SEC EDGAR site.</p>
+<p>Of course, an alternative to using online data is to provide data to students. For example, we can give them CRSP data instead of using Yahoo Finance. They will then need to upload the CRSP data to Julius. There is a way to make large CRSP/Compustat datasets available to students while uploading only a subset of the data to Julius. This is useful because we may want to look at different tickers or different time periods or different variables in different analyses, but uploading a large dataset into Julius can be slow. Here are the steps I follow (please share alternatives in the comments below).</p>
+<ol type="1">
+<li>Download the dataset from CRSP or Compustat or wherever and save it as a csv file in Dropbox.</li>
+<li>Copy the csv file’s Dropbox link. Change the last symbol of the URL from 0 to 1 (dl = 0 at the end of the URL means “direct link = False;” dl = 1 means “direct link = True”, which is what we want). Share the revised URL with students.</li>
+<li>Tell students to ask Julius to install the python library DuckDB and to read only the part of the data they want from the csv file at the URL. For example, they can say “use duckdb to read only the WMT returns.”</li>
+</ol>
+<p>DuckDB uses SQL syntax to read the file. We get the convenience of SQL (we don’t need to read the entire file into memory) without having to create a SQL database.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>There is a slight caveat that the percent change of the adjusted closing price on an ex-dividend day takes the dividend out of the denominator of the price ratio rather than adding it to the numerator, but, given typical quarterly dividend yields, this has a negligible effect. Percent changes of adjusted closing prices on all days other than ex-dividend days equal percent changes in split-adjusted closing prices.↩︎</p></li>
+<li id="fn2"><p>An additional reason for updating yfinance is is that older versions (verions as recent as 0.2.54) have recently been returning ”rate limit” errors. Remind Julius to upgrade yfinance if you encounter that.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>Finance</category>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/02-online-data/</guid>
+  <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/02-online-data/online.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Data Visualization</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/03-visualize/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/03-visualize/visualize2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Python has very versatile plotting libraries. The primary libraries are matplotlib and seaborn, but there are others - for example, plotly and other libraries create interactive html plots. All of the standard plot types are available. For ideas, see <a href="https://matplotlib.org/stable/gallery/">here</a> for matplotlib examples and <a href="https://seaborn.pydata.org/examples/index.html">here</a> for seaborn. We can ask Julius to adjust the figure size, font sizes, tick locations, tick labels, axis labels, title, legend positioning, and more. Figures can be saved and downloaded as jpegs, pngs, pdfs, or other types. Different themes can also be applied – gridded or not gridded, light or dark background, legend or no legend, etc. We can put multiple plots in the same figure, and they can share a legend if it is appropriate. We can add annotations within plots. I recommend encouraging students to ask Julius what is possible.</p>
+<p>Three particular seaborn features are worth mentioning. The regplot function creates scatter plots with regression lines. The default is to include a confidence interval around the line, but we can ask for it to be removed. The “hue” argument in seaborn provides a good means of plotting three-dimensional data. In addition to the x and y dimensions, a third dimension is represented by color. This works for scatter plots, bar plots, box plots, density plots, and other types. We can include separate regression lines for different colors in a scatter plot. We can also use the type of marker as a third dimension instead of color, or we can use color together with marker type to show four dimensions, though that becomes hard to interpret. I recommend indicating a fourth dimension by including multiple subplots in the same figure. The third feature that should be shown to students is the pairplot function. It creates a matrix of scatter plots (with density plots or histograms on the diagonal), so the correlations among multiple variables can be seen simultaneously.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>Python Tools</category>
+  <guid>https://finance-with-ai.org/posts/03-visualize/</guid>
+  <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/03-visualize/visualize2.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Julius and the Democratization of Coding</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/01-julius/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/01-julius/julius.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+<p>The world is aware that generative AI has made coders more efficient, but I don’t know if there is as much recognition of the more important fact that gen AI has made coding accessible to non-coders. I expect this to change rapidly by word of mouth: Once exposed to the wonder of coding with gen AI, one cannot help but want to share the word. We can accelerate that change for our students.</p>
+<p>There are many IDEs (integrated development environements) that incorporate AI assistance, among which <a href="https://www.cursor.com/en">Cursor</a> may be the most popular at the moment. Those tools are fantastic, but the variety of options makes them intimidating to non-coders. The leading chatbots also have “code interpreters” that execute generated code to respond to prompts. But, as of this writing, those interpreters are closed systems. They provide a fixed menu of libraries and do not allow the user to install more. <a href="https://julius.ai">Julius.ai</a> bridges the gap. It is a full-fledged coding environment, allowing the user to install any library he or she wishes. At the same time, it has the ease of use of a chatbot (and get the 50% academic discount by emailing team@julius.ai from your university email).</p>
+<p>The Julius website states that it provides an “intuitive way to analyze and visualize data without having to code, making statistical analysis accessible to everyone.” Democratizing coding is the goal of the Julius developers. However, the focus on statistical analysis understates what Julius has to offer. You can choose to work in either python or R. If you choose python, which I recommend, then you can do anything with Julius that python can do, and python can do pretty much everything. We’ll explore lots of applications in subsequent posts. I’ll refer to Julius throughout my posts, because I don’t think there is anything superior available now and because it is what I use in my course, but the things we discuss will frequently apply to other AI + python setups as well.</p>
+<p>Julius is a wrapper around large language models (LLMs), including the latest models from OpenAI and Anthropic as of this writing. Julius sends the user’s prompts to the user’s selected LLM (the general consensus in the blogosphere, and my own impression, is that the Anthropic models Claude 3.5 and Claude 3.7 are the best coders available at this time) with additional context created by the Julius developers. If the LLM generates code, then Julius’s servers execute it. The user can see the code as it is written and see what the code creates. The chat is very informative, telling the user what the plan is before the code is generated and then interpreting and explaining the results afterwards. A benefit of this process is that students learn something about coding in a relatively painless way.</p>
+<p>A valid concern about gen AI coding for non-coders is that an LLM may make a mistake that the user cannot detect. When OpenAI released GPT 3.5 in 2022, it frequently hallucinated. It is natural to worry about hallucinations in AI-generated code. One saving grace is that the models have improved tremendously since 2022, and hallucinations are much less common. An equally important consideration is the nature of coding. Hallucinations about facts in coding would be hallucinations about syntax, and incorrect syntax won’t run. Syntax errors certainly happen, but Julius sends the error messages back to the LLM in an iterative manner until, almost always, the syntax is corrected and the code runs. The type of error that usually happens with gen AI coding for non-coders results from the LLM not fully understanding what the user wants. To guard against this, it is important to engage in a conversation with the LLM about what you want, what it understands regarding what you want, what it plans to do, and what it did. Finally, we should try to check code generated by an LLM by testing it on small examples.</p>
+<p>It is obviously easier to ensure that the LLM did what you want if you can read python code. So, how much python to teach students? Luckily, python is pretty easy to read if you understand the basic structure. I take some time in early sessions of my course to point out: “this is an object, a method of the object is being applied here, this is a function, this is a list …” I also recorded some introductory videos, which are linked in the “Course Materials” (though I doubt they were watched). As I said, a valuable side effect of the course is that students learn something about python, which they feel they need to do, but which they don’t really have the time to do if they had to learn it in a pre-AI mode.</p>
+<p>There are products that compete with Julius in one way or another that are certainly worth showing to students, and new products are appearing at a rapid pace. Plus, the leading LLM providers are expanding their services. An example of a competing product is <a href="https://vizly.fyi/">Vizly</a>. It has the same data analysis/visualization focus as Julius. The developers were previously at Plotly, and the default plotting library is plotly, which creates very nice interactive HTML plots (you can also use plotly with Julius). Vizly is worth exploring, but I don’t have a lot of experience with it. Casting a wider net, students should be introduced to <a href="https://colab.research.google.com/">Google Colab</a>. It is not a chatbot, but it is a free JupyterLab environment with free AI assistance provided by the latest Google model (Gemini 2.5 as of this writing). You start by opening a new notebook or exploring the provided Introduction to Colab notebook. I recommend starting a notebook by asking the AI to mount your Google Drive. Then you can read and write files from your Google Drive (ask the AI to do that also). You can also save your Jupyter notebook there. Casting the net even wider, I highly recommend <a href="https://replit.com/~">Replit</a>. It creates very professional web apps, writing the HTML and CSS to create the user interface along with (usually) python to do the actual work. It also provides a hosting service, so you can deploy your app online with just a few clicks. We’ll explore creating apps with Julius in subsequent posts using the python streamlit and gradio libraries.</p>
+<p>There are many more AI + coding tools out there. Please share your favorites, and share your experiences in teaching finance with AI, in the comments below.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <category>AI Overview</category>
+  <guid>https://finance-with-ai.org/posts/01-julius/</guid>
+  <pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/01-julius/julius.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Teaching Finance with AI</title>
+  <dc:creator>Kerry Back</dc:creator>
+  <link>https://finance-with-ai.org/posts/00-welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://finance-with-ai.org/posts/00-welcome/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace. I’ve started this blog and created the site <a href="https://finance-with-ai.org">finance-with-ai.org</a> to communicate things I’ve learned about teaching MBA students at Rice University how to do financial analyses using “AI + coding” and more broadly how generative AI can and is being used in the finance industry. I will post short notes on what I’ve learned about teaching this topic and on related things I find interesting. The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.</p>
+<p>The current effectiveness of AI + coding varies somewhat between corporate finance and investments applications. Here, I lump fundamental security analysis with corporate finance. There are many topics in the investments area for which spreadsheets were never well equipped and for which spreadsheets are seldom used in practice. Previously, it was difficult to teach those topics by example, but now students can prompt an LLM to generate code for them.</p>
+<p>Even in capital budgeting, financial statement analysis, and pro forma financial valuation, AI is already very valuable. It is not yet ready to replace spreadsheets, but it can be a useful complement to spreadsheets. AI can be used as a collaborator – “tell me how you would do this” or “you do it your way, and I’ll do it my way, and then we can compare answers.” As the models improve, I expect the world to shift more and more to AI in lieu of spreadsheets even for corporate finance applications. Of course, Hewlett-Packard is still making the 12C financial calculator, and Microsoft will undoubtedly sell Excel for many years to come, but I think AI + coding will eventually dominate. To prepare our students for that world and to give them a leg up, we should teach them what they can do now and what may lie ahead.</p>
+<p>It is hard to keep up in this rapidly evolving world. Please help by sharing with me and others in the comments.</p>
+<hr>
+<p><em>Also on substack at <a href="https://kerryback.substack.com">kerryback.substack.com</a></em></p>
+
+
+
+ ]]></description>
+  <guid>https://finance-with-ai.org/posts/00-welcome/</guid>
+  <pubDate>Sat, 03 May 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://finance-with-ai.org/posts/00-welcome/logo.png" medium="image" type="image/png" height="102" width="144"/>
+</item>
+</channel>
+</rss>

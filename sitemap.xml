@@ -1,83 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.kerryback.com/subscribe.html</loc>
-    <lastmod>2025-09-08T14:00:48.700Z</lastmod>
+    <loc>https://finance-with-ai.org/subscribe.html</loc>
+    <lastmod>2025-09-21T15:33:24.332Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/99-edgar/index_to_be_revised.html</loc>
-    <lastmod>2025-09-08T14:00:48.686Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/99-edgar/index_to_be_revised.html</loc>
+    <lastmod>2025-09-21T15:33:24.320Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/12-fama-french/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.589Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/12-fama-french/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.224Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/10-apis/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.582Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/10-apis/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.218Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/08-simulation/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.572Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/08-simulation/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.207Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/06-prompts/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.563Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/06-prompts/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.198Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/04-capm/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.550Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/04-capm/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.185Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/02-online-data/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.537Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/02-online-data/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.172Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.514Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/00-welcome/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.171Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/about.html</loc>
-    <lastmod>2025-09-08T14:00:48.503Z</lastmod>
+    <loc>https://finance-with-ai.org/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.144Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/01-julius/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.536Z</lastmod>
+    <loc>https://finance-with-ai.org/about.html</loc>
+    <lastmod>2025-09-21T15:33:24.132Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/03-visualize/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.544Z</lastmod>
+    <loc>https://finance-with-ai.org/navbar-integration-example.html</loc>
+    <lastmod>2025-09-21T15:33:24.144Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/05-building/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.560Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/01-julius/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.172Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/07-apps/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.572Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/03-visualize/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.179Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/09-mean-variance/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.579Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/05-building/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.195Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/11-alpha/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.587Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/07-apps/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.207Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/13-capital-budgeting/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.600Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/09-mean-variance/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.214Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/18-scraping/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.644Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/11-alpha/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.223Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/24-tech-stack/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.669Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/13-capital-budgeting/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.235Z</lastmod>
   </url>
   <url>
-    <loc>https://blog.kerryback.com/posts/form4/index.html</loc>
-    <lastmod>2025-09-08T14:00:48.691Z</lastmod>
+    <loc>https://finance-with-ai.org/posts/18-scraping/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://finance-with-ai.org/posts/24-tech-stack/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.303Z</lastmod>
+  </url>
+  <url>
+    <loc>https://finance-with-ai.org/posts/form4/index.html</loc>
+    <lastmod>2025-09-21T15:33:24.323Z</lastmod>
   </url>
 </urlset>

@@ -1,1 +1,1 @@
-Sitemap: https://blog.kerryback.com/sitemap.xml
+Sitemap: https://finance-with-ai.org/sitemap.xml
