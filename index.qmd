@@ -1,7 +1,7 @@
 ---
 title: ""
 listing:
-  contents: 
+  contents:
     - "posts/*/index.qmd"
   sort: "date asc"
   type: default
