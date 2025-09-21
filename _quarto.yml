@@ -30,7 +30,7 @@ site:
       - text: Blog
         href: index.qmd
       - text: Syllabus
-        href: https://mgmt675-2026.kerryback.com
+        href: https://mgmt675-2026.kerryback.com/MGMT675.pdf
         target: _blank
       - text: Discussions
         href: "https://genai4finance.kerryback.com#giscus"
