@@ -16,7 +16,7 @@ project:
 
 site:
   title: "Blog: Gen AI for Finance"
-  site-url: https://finance-with-ai.org
+  site-url: https://blog.kerryback.com
   feed:
     type: rss2
   description: "Teaching the use of generative AI in finance"
