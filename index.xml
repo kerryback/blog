@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Blog: Gen AI for Finance</title>
-<link>https://finance-with-ai.org/</link>
-<atom:link href="https://finance-with-ai.org/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://blog.kerryback.com/</link>
+<atom:link href="https://blog.kerryback.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Teaching the use of generative AI in finance</description>
 <generator>quarto-1.8.24</generator>
 <lastBuildDate>Thu, 10 Jul 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>The Ultimate Tech Stack for Researchers</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/24-tech-stack/</link>
+  <link>https://blog.kerryback.com/posts/24-tech-stack/</link>
   <description><![CDATA[ 
 
 
@@ -23,7 +23,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/24-tech-stack/tech-stack.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/24-tech-stack/tech-stack.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Today, I’m departing from my usual topic of teaching and instead am going to discuss tools for researchers. I’m going way out on a skinny limb by claiming I know the best set of tools now available. But, I’m pretty sure that I do, and I want to share the information. Of course, I should emphasize “now available,” because, the way things are going, there may be tools six months from now that are an order of magnitude better.</p>
@@ -61,14 +61,14 @@
 </ol>
 </section></div> ]]></description>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/24-tech-stack/</guid>
+  <guid>https://blog.kerryback.com/posts/24-tech-stack/</guid>
   <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/24-tech-stack/tech-stack.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/24-tech-stack/tech-stack.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Form 4’s from EDGAR</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/form4/</link>
+  <link>https://blog.kerryback.com/posts/form4/</link>
   <description><![CDATA[ 
 
 
@@ -77,7 +77,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/form4/form4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/form4/form4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>This past spring, while Tesla was in the midst of a 50% freefall, the news media reported that Tesla insiders had been selling shares. Here, “insiders” means individuals required to file a Form 4 with the SEC when they trade: directors, officers, and owners of very large stakes (more than 10% of outstanding shares). This was a good motivation for scraping the SEC EDGAR website.</p>
@@ -110,14 +110,14 @@
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/form4/</guid>
+  <guid>https://blog.kerryback.com/posts/form4/</guid>
   <pubDate>Mon, 02 Jun 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/form4/form4.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/form4/form4.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Capital Budgeting</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/13-capital-budgeting/</link>
+  <link>https://blog.kerryback.com/posts/13-capital-budgeting/</link>
   <description><![CDATA[ 
 
 
@@ -126,7 +126,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/13-capital-budgeting/capital-budgeting2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/13-capital-budgeting/capital-budgeting2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Spreadsheets are perfectly suited for capital budgeting exercises. Those exercises involve a minimal amount of data (data = assumptions mostly) and only basic arithmetic, and we would like to view multiple tables (balance sheet, income statement, and cash flows) simultaneously, which we can do in a spreadsheet but not easily in python. How much value can AI add?</p>
@@ -142,14 +142,14 @@
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/13-capital-budgeting/</guid>
+  <guid>https://blog.kerryback.com/posts/13-capital-budgeting/</guid>
   <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/13-capital-budgeting/capital-budgeting2.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/13-capital-budgeting/capital-budgeting2.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Web Scraping</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/18-scraping/</link>
+  <link>https://blog.kerryback.com/posts/18-scraping/</link>
   <description><![CDATA[ 
 
 
@@ -158,7 +158,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/18-scraping/scraping.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/18-scraping/scraping.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Getting data from websites is a task for which “AI + coding” can really increase efficiency. I use two examples to illustrate web scraping. The first is to extract a table from a web page. The second is to download multiple csv files from a website. It is fair to warn students that there are other examples that are more difficult, a point to which I’ll return at the end.</p>
@@ -192,14 +192,14 @@
 </ol>
 </section></div> ]]></description>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/18-scraping/</guid>
+  <guid>https://blog.kerryback.com/posts/18-scraping/</guid>
   <pubDate>Mon, 19 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/18-scraping/scraping.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/18-scraping/scraping.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Fama-French Factors</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/12-fama-french/</link>
+  <link>https://blog.kerryback.com/posts/12-fama-french/</link>
   <description><![CDATA[ 
 
 
@@ -208,7 +208,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/12-fama-french/factors.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/12-fama-french/factors.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>The CAPM is intuitively reasonable and is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3994848">widely used by companies to estimate their cost of capital</a>, but it is well known to do a poor job of explaining average returns. I like to show students this <a href="https://learn-investments.rice-business.org/capm/sml-industries">interactive plot</a> of estimated betas and average returns for the Fama-French 48 industries. Hovering over the data points brings up the industry names. As students should expect, we see tobacco, alcoholic beverages, and defense among the low beta industries, and we see steel and construction among the high beta industries. However, we see very little difference between the average returns of low beta industries and high beta industries. In other words, the empirical security market line is too flat, as is well known. Other pages on the same website show the <a href="https://learn-investments.rice-business.org/factor-investing/quintiles">returns</a> of characteristic-sorted portfolios and their <a href="https://learn-investments.rice-business.org/capm/two-way-capm">CAPM alphas and t-statistics</a>, drawing on <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Ken French’s data library</a>.</p>
@@ -221,14 +221,14 @@
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/12-fama-french/</guid>
+  <guid>https://blog.kerryback.com/posts/12-fama-french/</guid>
   <pubDate>Tue, 13 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/12-fama-french/factors.png" medium="image" type="image/png" height="100" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/12-fama-french/factors.png" medium="image" type="image/png" height="100" width="144"/>
 </item>
 <item>
   <title>Jensen’s Alpha</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/11-alpha/</link>
+  <link>https://blog.kerryback.com/posts/11-alpha/</link>
   <description><![CDATA[ 
 
 
@@ -237,7 +237,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/11-alpha/alpha.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/11-alpha/alpha.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>“Alpha” in this post will mean the CAPM alpha, that is, the intercept in the CAPM regression. It was first used to measure mutual fund performance by Michael Jensen, and, when used in that context, it is called Jensen’s alpha. It is worth stressing to students that a positive alpha does not mean that an investor should move all of his or her money into the fund. A fund can have a positive alpha but have a lower Sharpe ratio than the market. In fact, a fund has a positive alpha if and only if its Sharpe ratio is larger than the market’s Sharpe ratio <em>multiplied by the correlation between the fund and the market</em>. Because correlations are less than one, the Sharpe ratio hurdle for a fund to earn positive alpha is lower than the market Sharpe ratio. An interactive figure illustrating this principle can be found <a href="https://learn-investments.rice-business.org/capm/alphas-sharpes">here</a>. An extreme example is a fund with a zero beta. Such a fund has a positive alpha if and only if its Sharpe ratio is positive, meaning that it beats the risk-free return on average.</p>
@@ -251,14 +251,14 @@
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/11-alpha/</guid>
+  <guid>https://blog.kerryback.com/posts/11-alpha/</guid>
   <pubDate>Mon, 12 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/11-alpha/alpha.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/11-alpha/alpha.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>API Calls</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/10-apis/</link>
+  <link>https://blog.kerryback.com/posts/10-apis/</link>
   <description><![CDATA[ 
 
 
@@ -267,7 +267,7 @@
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/10-apis/apis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/10-apis/apis.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>This <a href="https://hbsp.harvard.edu/product/HEC382-PDF-ENG">HBS case</a>, about implementing generative AI at Deloitte Canada, is a useful tool for teaching the benefits, risks, and strategies of implementing AI in a corporate environment. Efficiency is of course the key benefit, and data security, client trust, and compliance are key concerns. The general strategy for implementation involves creating a custom channel through which all employees chat with an LLM, a channel that passes relevant corporate standards to the LLM in each chat, that allows monitoring, and that includes a guarantee of data privacy. To complement the case, I show students that they can use Julius to create a mini version of this, namely a custom chatbot that adds whatever context they want to each prompt. This can be done with a custom GPT from OpenAI, but seeing code that produces a custom chatbot makes everything more transparent.</p>
@@ -350,14 +350,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 </ol>
 </section></div> ]]></description>
   <category>AI Overview</category>
-  <guid>https://finance-with-ai.org/posts/10-apis/</guid>
+  <guid>https://blog.kerryback.com/posts/10-apis/</guid>
   <pubDate>Sun, 11 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/10-apis/apis.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/10-apis/apis.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Mean-Variance Frontier</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/09-mean-variance/</link>
+  <link>https://blog.kerryback.com/posts/09-mean-variance/</link>
   <description><![CDATA[ 
 
 
@@ -366,7 +366,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/09-mean-variance/mean-variance.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/09-mean-variance/mean-variance.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Mean-variance optimization is one of those topics that has always been awkward to teach with spreadsheets. It is messy to define the portfolio variance in a spreadsheet for more than two assets, and we are forced to use Solver to find efficient portfolios or to deal with Excel’s matrix algebra functions that operate on arrays. Also, if we create an example for three assets and someone asks about four, then we have to almost entirely reengineer the spreadsheet. I don’t think we actually expect students to do mean-variance analysis in a spreadsheet after they graduate - we’re just teaching the concept (I think). But, we can now teach the concept without the clunkiness of setting it up in a spreadsheet.</p>
@@ -374,7 +374,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 <p>I take a very hand-waving approach to explain the formula. I remind students first that at the top of a hill the slope must be zero and second that the slope of a function is its derivative, so a maximum is the solution of an equation “derivative = 0.” Of course, they have all seen that at some point in their lives. I then show them (without deriving) the equations for maximizing the Sharpe ratio with three risky assets:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/09-mean-variance/equations.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/09-mean-variance/equations.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>I explain that this system of equations is written as Sigma times w equals risk premia, explaining matrix multiplication briefly, and then say that it can be solved for w with a matrix version of “dividing by” Sigma. That seems to give enough intuition for the formula w = Sigma inverse times risk premia.</p>
@@ -389,14 +389,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/09-mean-variance/</guid>
+  <guid>https://blog.kerryback.com/posts/09-mean-variance/</guid>
   <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/09-mean-variance/mean-variance.png" medium="image" type="image/png" height="104" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/09-mean-variance/mean-variance.png" medium="image" type="image/png" height="104" width="144"/>
 </item>
 <item>
   <title>Simulation</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/08-simulation/</link>
+  <link>https://blog.kerryback.com/posts/08-simulation/</link>
   <description><![CDATA[ 
 
 
@@ -405,7 +405,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/08-simulation/monte-carlo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/08-simulation/monte-carlo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Simulation can be done in a spreadsheet but is better done elsewhere. An easy example of the AI + coding approach is to simulate a retirement plan.</p>
@@ -421,14 +421,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/08-simulation/</guid>
+  <guid>https://blog.kerryback.com/posts/08-simulation/</guid>
   <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/08-simulation/monte-carlo.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/08-simulation/monte-carlo.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Creating Apps</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/07-apps/</link>
+  <link>https://blog.kerryback.com/posts/07-apps/</link>
   <description><![CDATA[ 
 
 
@@ -437,7 +437,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/07-apps/apps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/07-apps/apps.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>After the last session of my class in the spring, a student came up to me and said “I want to thank you. I never knew anything about programming, and now I can create apps. It’s amazing!” We have a few years, I think, when we can be the first to show students the power of AI + coding and have these rewarding moments. But soon everyone will know, and I’m not sure what we’ll do then. Maybe <a href="https://www.chronicle.com/article/are-you-ready-for-the-ai-university">AI will teach our courses</a>.</p>
@@ -458,14 +458,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/07-apps/</guid>
+  <guid>https://blog.kerryback.com/posts/07-apps/</guid>
   <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/07-apps/apps.png" medium="image" type="image/png" height="103" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/07-apps/apps.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 <item>
   <title>Building Stuff</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/05-building/</link>
+  <link>https://blog.kerryback.com/posts/05-building/</link>
   <description><![CDATA[ 
 
 
@@ -474,7 +474,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/05-building/building.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/05-building/building.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>A big advantage of coding (and using AI to write code) is that things can be automated. A student this spring told me that a friend of his in the finance industry had just used AI to reduce the time required for a certain task he often had to do from two days to two hours. There are many stories like that. To illustrate automation in a simple setting, we can use the <a href="https://finance-with-ai.org/posts/04-capm">CAPM calculation</a> to show how PowerPoint decks can be created with AI + python.</p>
@@ -488,14 +488,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/05-building/</guid>
+  <guid>https://blog.kerryback.com/posts/05-building/</guid>
   <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/05-building/building.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/05-building/building.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Prompt Engineering (or Not)</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/06-prompts/</link>
+  <link>https://blog.kerryback.com/posts/06-prompts/</link>
   <description><![CDATA[ 
 
 
@@ -504,7 +504,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/06-prompts/prompts.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/06-prompts/prompts.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>I use <a href="https://mentimeter.com/">Menti</a> surveys periodically to ask students what they would like to learn more about, and how to write effective prompts frequently shows up. In the first bit of time after ChatGPT 3.5 was introduced, there was a lot of chatter online about prompt engineering. This seems to have died down somewhat, and for good reason. The models are so good now that they don’t generally require any special prompting. In particular, you do not need to tell Julius “you are an expert coder …” If any role-setting is even needed now, which is doubtful, I think it must be supplied in the context provided by Julius to the LLMs.</p>
@@ -520,14 +520,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>AI Overview</category>
-  <guid>https://finance-with-ai.org/posts/06-prompts/</guid>
+  <guid>https://blog.kerryback.com/posts/06-prompts/</guid>
   <pubDate>Wed, 07 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/06-prompts/prompts.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/06-prompts/prompts.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>CAPM</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/04-capm/</link>
+  <link>https://blog.kerryback.com/posts/04-capm/</link>
   <description><![CDATA[ 
 
 
@@ -536,7 +536,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/04-capm/capm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/04-capm/capm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Calculating betas is an easy exercise to do with Julius. We can also estimate the market risk premium, and we can get the risk-free rate from FRED, so we can estimate the cost of equity capital according to the CAPM. This exercise provides the opportunity to explore <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Ken French’s data library</a> while getting market excess returns and risk-free rates.</p>
@@ -551,14 +551,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Finance</category>
-  <guid>https://finance-with-ai.org/posts/04-capm/</guid>
+  <guid>https://blog.kerryback.com/posts/04-capm/</guid>
   <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/04-capm/capm.png" medium="image" type="image/png" height="103" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/04-capm/capm.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 <item>
   <title>Online Data</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/02-online-data/</link>
+  <link>https://blog.kerryback.com/posts/02-online-data/</link>
   <description><![CDATA[ 
 
 
@@ -567,7 +567,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/02-online-data/online.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/02-online-data/online.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>We can upload files to Julius as with other chatbots. We can then chat about the data with the benefit of python. In fact, Julius.ai started life as the “Chat with Your Data” plug-in for ChatGPT. However, Julius can also grab online data. Computing stock returns from <a href="https://finance.yahoo.com/">Yahoo Finance</a> data is a good place to start. The yfinance library is the best python library for accessing Yahoo Finance. The data begins in 1970. To get the longest possible history for a ticker, we can ask Julius to get data starting in 1970. We can specify other dates, and we can also specify the frequency of the data - daily, weekly, monthly, quarterly, annual.</p>
@@ -596,14 +596,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 </section></div> ]]></description>
   <category>Finance</category>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/02-online-data/</guid>
+  <guid>https://blog.kerryback.com/posts/02-online-data/</guid>
   <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/02-online-data/online.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/02-online-data/online.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Data Visualization</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/03-visualize/</link>
+  <link>https://blog.kerryback.com/posts/03-visualize/</link>
   <description><![CDATA[ 
 
 
@@ -612,7 +612,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/03-visualize/visualize2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/03-visualize/visualize2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>Python has very versatile plotting libraries. The primary libraries are matplotlib and seaborn, but there are others - for example, plotly and other libraries create interactive html plots. All of the standard plot types are available. For ideas, see <a href="https://matplotlib.org/stable/gallery/">here</a> for matplotlib examples and <a href="https://seaborn.pydata.org/examples/index.html">here</a> for seaborn. We can ask Julius to adjust the figure size, font sizes, tick locations, tick labels, axis labels, title, legend positioning, and more. Figures can be saved and downloaded as jpegs, pngs, pdfs, or other types. Different themes can also be applied – gridded or not gridded, light or dark background, legend or no legend, etc. We can put multiple plots in the same figure, and they can share a legend if it is appropriate. We can add annotations within plots. I recommend encouraging students to ask Julius what is possible.</p>
@@ -624,14 +624,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>Python Tools</category>
-  <guid>https://finance-with-ai.org/posts/03-visualize/</guid>
+  <guid>https://blog.kerryback.com/posts/03-visualize/</guid>
   <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/03-visualize/visualize2.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/03-visualize/visualize2.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Julius and the Democratization of Coding</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/01-julius/</link>
+  <link>https://blog.kerryback.com/posts/01-julius/</link>
   <description><![CDATA[ 
 
 
@@ -640,7 +640,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/01-julius/julius.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/01-julius/julius.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
 </figure>
 </div>
 <p>The world is aware that generative AI has made coders more efficient, but I don’t know if there is as much recognition of the more important fact that gen AI has made coding accessible to non-coders. I expect this to change rapidly by word of mouth: Once exposed to the wonder of coding with gen AI, one cannot help but want to share the word. We can accelerate that change for our students.</p>
@@ -658,14 +658,14 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
  ]]></description>
   <category>AI Overview</category>
-  <guid>https://finance-with-ai.org/posts/01-julius/</guid>
+  <guid>https://blog.kerryback.com/posts/01-julius/</guid>
   <pubDate>Sun, 04 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/01-julius/julius.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/01-julius/julius.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Teaching Finance with AI</title>
   <dc:creator>Kerry Back</dc:creator>
-  <link>https://finance-with-ai.org/posts/00-welcome/</link>
+  <link>https://blog.kerryback.com/posts/00-welcome/</link>
   <description><![CDATA[ 
 
 
@@ -674,7 +674,7 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://finance-with-ai.org/posts/00-welcome/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+<p><img src="https://blog.kerryback.com/posts/00-welcome/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
 </figure>
 </div>
 <p>I believe that one of the most important things we can teach business students today is how they can use AI to be more efficient in the workplace. I’ve started this blog and created the site <a href="https://finance-with-ai.org">finance-with-ai.org</a> to communicate things I’ve learned about teaching MBA students at Rice University how to do financial analyses using “AI + coding” and more broadly how generative AI can and is being used in the finance industry. I will post short notes on what I’ve learned about teaching this topic and on related things I find interesting. The blog is intended to be a resource for finance instructors at the undergraduate, MBA, and MSF levels.</p>
@@ -687,9 +687,9 @@ print("Response:", response.choices[0].message.content)</code></pre>
 
 
  ]]></description>
-  <guid>https://finance-with-ai.org/posts/00-welcome/</guid>
+  <guid>https://blog.kerryback.com/posts/00-welcome/</guid>
   <pubDate>Sat, 03 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://finance-with-ai.org/posts/00-welcome/logo.png" medium="image" type="image/png" height="102" width="144"/>
+  <media:content url="https://blog.kerryback.com/posts/00-welcome/logo.png" medium="image" type="image/png" height="102" width="144"/>
 </item>
 </channel>
 </rss>
