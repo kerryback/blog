@@ -37,6 +37,9 @@ site:
         target: _blank
       - text: FMA Award
         href: "#"
+      - text: Python
+        href: https://workshop.kerryback.com
+        target: _blank
 
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
