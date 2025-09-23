@@ -26,9 +26,11 @@ site:
     left:
       - icon: house-door-fill
         href: https://genai4finance.kerryback.com
+        target: _blank
     right:
       - text: Blog
         href: index.qmd
+        target: _blank
       - text: Syllabus
         href: https://mgmt675-2026.kerryback.com/MGMT675.pdf
         target: _blank
@@ -36,7 +38,8 @@ site:
         href: https://fma2025.kerryback.com
         target: _blank
       - text: FMA Award
-        href: "#"
+        href: https://fma2025.kerryback.com/award.html
+        target: _blank
       - text: Python
         href: https://workshop.kerryback.com
         target: _blank
